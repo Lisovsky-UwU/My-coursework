@@ -134,5 +134,10 @@ namespace Coursework
         {
             Request.DeleteRowsAndShow(dataGridView1);
         }
+
+        private void ToolStripSaveDB_Click(object sender, EventArgs e)
+        {
+            Request.SaveTable();
+        }
     }
 }

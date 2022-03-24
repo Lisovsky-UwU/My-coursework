@@ -207,7 +207,13 @@ namespace Coursework
                 dTable.Rows[i]["Эпоха"] = i;
             }
         }
-
+        /// <summary>
+        /// Сохранить таблицу в БД
+        /// </summary>
+        public void SaveTable()
+        {
+            dataBase.UpdateTable(nameOpenTable, dTable);
+        }
         /// <summary>
         /// Закрыть текущую БД
         /// </summary>

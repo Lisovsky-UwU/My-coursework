@@ -144,25 +144,26 @@ namespace Coursework
             // ToolStripOpenDB
             // 
             this.ToolStripOpenDB.Name = "ToolStripOpenDB";
-            this.ToolStripOpenDB.Size = new System.Drawing.Size(151, 22);
+            this.ToolStripOpenDB.Size = new System.Drawing.Size(180, 22);
             this.ToolStripOpenDB.Text = "Открыть БД";
             this.ToolStripOpenDB.Click += new System.EventHandler(this.buttonDBConnect_Click);
             // 
             // ToolStripSaveDB
             // 
             this.ToolStripSaveDB.Name = "ToolStripSaveDB";
-            this.ToolStripSaveDB.Size = new System.Drawing.Size(151, 22);
+            this.ToolStripSaveDB.Size = new System.Drawing.Size(180, 22);
             this.ToolStripSaveDB.Text = "Сохранить БД";
+            this.ToolStripSaveDB.Click += new System.EventHandler(this.ToolStripSaveDB_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(148, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // ToolStripCloseDB
             // 
             this.ToolStripCloseDB.Name = "ToolStripCloseDB";
-            this.ToolStripCloseDB.Size = new System.Drawing.Size(151, 22);
+            this.ToolStripCloseDB.Size = new System.Drawing.Size(180, 22);
             this.ToolStripCloseDB.Text = "Закрыть БД";
             this.ToolStripCloseDB.Click += new System.EventHandler(this.buttonDBClose_Click);
             // 

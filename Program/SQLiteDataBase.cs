@@ -256,6 +256,48 @@ namespace Coursework
             return dTable;
         }
         /// <summary>
+        /// Обновить таблицу в БД
+        /// </summary>
+        /// <param name="tableName">Название таблицы для сохранения</param>
+        /// <param name="dTable">Новая таблица</param>
+        public void UpdateTable(string tableName, DataTable dTable)
+        {
+            string SQLQuery = $"DROP TABLE [{tableName}];";
+            SQLQuery += $"CREATE TABLE [{tableName}] ([{dTable.Columns[0].ColumnName}] INTEGER";
+            for (int i = 1; i < dTable.Columns.Count; i++)
+            {
+                SQLQuery += $", [{dTable.Columns[i].ColumnName}] REAL";
+            }
+            SQLQuery += ");";
+            for (int i = 0; i < dTable.Rows.Count; i++)
+            {
+                SQLQuery += $"INSERT INTO [{tableName}] VALUES ({i}";
+                for (int j = 1; j < dTable.Rows[i].ItemArray.Length; j++)
+                {
+                    SQLQuery += ", " + dTable.Rows[i][j].ToString().Replace(',', '.');
+                }
+                SQLQuery += ");";
+            }
+            try
+            {
+                RunQuery(SQLQuery);
+                MessageBox.Show("Новая таблица сохранена в БД", 
+                    "Успешно", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information
+                    );
+            }
+            catch
+            {
+                MessageBox.Show(
+                   $"Ошибка сохранение новой таблицы {tableName}",
+                   "Ошибка сохранения",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error
+                   );
+            }
+        }
+        /// <summary>
         /// Метод закрытия базы даных
         /// </summary>
         public void Close()
