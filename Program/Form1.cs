@@ -37,15 +37,15 @@ namespace Coursework
 
         private void CloseDB()
         {
-            dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
+            dataGridViewData.Rows.Clear();
+            dataGridViewData.Columns.Clear();
             comboBoxTable.Items.Clear();
             comboBoxTable.Enabled = false;
             textBoxT.Text = "";
             textBoxT.Enabled = false;
             textBoxA.Text = "";
             textBoxA.Enabled = false;
-            pictureBox1.Image = null;
+            pictureBoxInData.Image = null;
             Request.CloseDB();
         }
 
@@ -58,7 +58,8 @@ namespace Coursework
                 textBoxT.Enabled = true;
                 textBoxA.Text = Request.ReadA().ToString();
                 textBoxA.Enabled = true;
-                pictureBox1.Image = Request.IMG;
+                pictureBoxInData.Image = Request.IMG;
+                pictureBoxLvl1.Image = Request.IMG;
                 //comboBoxTable.Items.AddRange(Request.TableNames);
                 foreach (string tableName in Request.TableNames)
                 {
@@ -68,7 +69,7 @@ namespace Coursework
                 {
                     comboBoxTable.Enabled = true;
                     comboBoxTable.SelectedIndex = 0;
-                    Request.OpenAndShowTable(dataGridView1, comboBoxTable.SelectedItem.ToString());
+                    Request.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
                 }
             }
         }
@@ -82,7 +83,7 @@ namespace Coursework
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(fileDialog.FileName);
-                pictureBox1.Image = image;
+                pictureBoxInData.Image = image;
                 Request.IMG = image;
             }
         }
@@ -122,22 +123,31 @@ namespace Coursework
 
         private void comboBoxTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Request.OpenAndShowTable(dataGridView1, comboBoxTable.SelectedItem.ToString());
+            Request.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
         }
 
         private void buttonAddRow_Click(object sender, EventArgs e)
         {
-            Request.AddRowAndShow(dataGridView1);
+            Request.AddRowAndShow(dataGridViewData);
         }
 
         private void buttonDeleteRows_Click(object sender, EventArgs e)
         {
-            Request.DeleteRowsAndShow(dataGridView1);
+            Request.DeleteRowsAndShow(dataGridViewData);
         }
 
         private void ToolStripSaveDB_Click(object sender, EventArgs e)
         {
             Request.SaveTable();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Request.CalculateDecompositions();
+            CalculateLvl1.FillChartAllM(chartAllM);
+            CalculateLvl1.FillChartForecast(chartForecast);
+            CalculateLvl1.FillChartPhase(chartPhase);
+            CalculateLvl1.CalculateAccident(dataGridViewAccident);
         }
     }
 }

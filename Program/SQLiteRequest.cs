@@ -59,7 +59,8 @@ namespace Coursework
         /// <returns>Вернет значение T из БД</returns>
         public double ReadT()
         {
-            return dataBase.GetValue("Дополнительные данные", "T");
+            DataForCalculate.T = dataBase.GetValue("Дополнительные данные", "T");
+            return DataForCalculate.T;
         }
         /// <summary>
         /// Считать значение A из БД
@@ -67,7 +68,8 @@ namespace Coursework
         /// <returns>Вернет значение A из БД</returns>
         public double ReadA()
         {
-            return dataBase.GetValue("Дополнительные данные", "A");
+            DataForCalculate.A = dataBase.GetValue("Дополнительные данные", "A");
+            return DataForCalculate.A;
         }
         /// <summary>
         /// Записать новое значение для T в БД
@@ -76,6 +78,7 @@ namespace Coursework
         public void WriteT(double newT)
         {
             dataBase.UpdateValue("Дополнительные данные", "T", newT);
+            DataForCalculate.T = newT;
         }
         /// <summary>
         /// Записать новое значение для A в БД
@@ -84,6 +87,7 @@ namespace Coursework
         public void WriteA(double newA)
         {
             dataBase.UpdateValue("Дополнительные данные", "A", newA);
+            DataForCalculate.A = newA;
         }
         /// <summary>
         /// Записать данные из таблицы БД в DataGridView по запросу
@@ -196,6 +200,10 @@ namespace Coursework
                         );
                 }
             }
+        }
+        public void CalculateDecompositions()
+        {
+            CalculateLvl1.Calculated(dTable);
         }
         /// <summary>
         /// Обновить индексы в столбце "Эпоха"
