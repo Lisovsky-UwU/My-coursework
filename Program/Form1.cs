@@ -7,18 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Resources;
 
 namespace Coursework
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        SQLiteRequest Request;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-            Request = new SQLiteRequest();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            numericUpDownDecNumb.Value = CData.DecNumbToOutput;
+        }
+
+        /// <summary>
+        /// Открыть базу данных с помощью файлового диалога
+        /// </summary>
         private void OpenDataBaseWithFileDialog()
         {
             OpenFileDialog fileDialog = new OpenFileDialog
@@ -27,14 +35,17 @@ namespace Coursework
             };
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (Request.DBIsOpen == true)
+                if (CRequest.DBIsOpen == true)
                 {
                     CloseDB();
                 }
-                Request.OpenDB(fileDialog.FileName);
+                CRequest.OpenDB(fileDialog.FileName);
             }
         }
 
+        /// <summary>
+        /// Закрыть базу данных
+        /// </summary>
         private void CloseDB()
         {
             dataGridViewData.Rows.Clear();
@@ -45,35 +56,40 @@ namespace Coursework
             textBoxT.Enabled = false;
             textBoxA.Text = "";
             textBoxA.Enabled = false;
-            pictureBoxInData.Image = null;
-            Request.CloseDB();
+            pictureBoxInData = null;
+            pictureBoxLvl1 = null;
+            buttonAddRow.Enabled = false;
+            buttonDeleteRows.Enabled = false;
+            buttonCalculateDecomp.Enabled = false;
+            CRequest.CloseDB();
         }
 
+        // Кнопка подключения базы данных
         private void buttonDBConnect_Click(object sender, EventArgs e)
         {
             OpenDataBaseWithFileDialog();            
-            if (Request.DBIsOpen == true)
+            if (CRequest.DBIsOpen == true)
             {
-                textBoxT.Text = Request.ReadT().ToString();
+                textBoxT.Text = CData.T.ToString();
                 textBoxT.Enabled = true;
-                textBoxA.Text = Request.ReadA().ToString();
+                textBoxA.Text = CData.A.ToString();
                 textBoxA.Enabled = true;
-                pictureBoxInData.Image = Request.IMG;
-                pictureBoxLvl1.Image = Request.IMG;
-                //comboBoxTable.Items.AddRange(Request.TableNames);
-                foreach (string tableName in Request.TableNames)
-                {
-                    comboBoxTable.Items.Add(tableName);
-                }
+                pictureBoxInData.Image = CRequest.IMG;
+                pictureBoxLvl1.Image = CRequest.IMG;
+                comboBoxTable.Items.AddRange(CRequest.TableNames);
                 if (comboBoxTable.Items.Count != 0)
                 {
                     comboBoxTable.Enabled = true;
                     comboBoxTable.SelectedIndex = 0;
-                    Request.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
+                    CRequest.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
+                    buttonAddRow.Enabled = true;
+                    buttonDeleteRows.Enabled = true;
+                    buttonCalculateDecomp.Enabled = true;
                 }
             }
         }
 
+        // Кнопка загрузки изображения в БД
         private void buttonUploadImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog()
@@ -84,70 +100,101 @@ namespace Coursework
             {
                 Image image = Image.FromFile(fileDialog.FileName);
                 pictureBoxInData.Image = image;
-                Request.IMG = image;
+                CRequest.IMG = image;
             }
         }
 
+        // Кнопка закрытия БД
         private void buttonDBClose_Click(object sender, EventArgs e)
         {
             CloseDB();
         }
 
+        // Проверка вводимых значений в TextBox
         private void textBoxDigitFilter_KeyPress(object sender, KeyPressEventArgs e)
         {
             char symbol = e.KeyChar;
-            //8 - backspace
+            // 8 - backspace
             if (Char.IsDigit(symbol) == false && symbol != ',' && e.KeyChar != 8)
             {
                 e.Handled = true;
             }
         }
 
+        // Изменение значения в TextBox для T
         private void textBoxT_TextChanged(object sender, EventArgs e)
         {
             TextBox tb = (sender as TextBox);
             if (tb.Text != "" && tb.Text[tb.Text.Length - 1] != ',' && tb.Text[tb.Text.Length - 1] != '0')
             {
-                Request.WriteT(Convert.ToDouble((sender as TextBox).Text));
+                CRequest.WriteT(Convert.ToDouble(tb.Text));
             }
         }
 
+        // Изменение значения в TextBox для A
         private void textBoxA_TextChanged(object sender, EventArgs e)
         {
             TextBox tb = (sender as TextBox);
             if (tb.Text != "" && tb.Text[tb.Text.Length - 1] != ',' && tb.Text[tb.Text.Length - 1] != '0')
             {
-                Request.WriteA(Convert.ToDouble((sender as TextBox).Text));
+                CRequest.WriteA(Convert.ToDouble(tb.Text));
             }
         }
 
+        // Изменение выбранной таблицы
         private void comboBoxTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Request.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
+            CRequest.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
         }
 
+        // Кнопка добавления строки
         private void buttonAddRow_Click(object sender, EventArgs e)
         {
-            Request.AddRowAndShow(dataGridViewData);
+            CRequest.AddRowAndShow(dataGridViewData);
         }
 
+        // Кнопка удаления строк
         private void buttonDeleteRows_Click(object sender, EventArgs e)
         {
-            Request.DeleteRowsAndShow(dataGridViewData);
+            CRequest.DeleteRowsAndShow(dataGridViewData);
         }
 
+        // Кнопка сохранения изменений в БД
         private void ToolStripSaveDB_Click(object sender, EventArgs e)
         {
-            Request.SaveTable();
+            CRequest.SaveTable();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        // Кнопка подсчета декомпозиций
+        private void buttonCalculateDecomp_Click(object sender, EventArgs e)
         {
-            Request.CalculateDecompositions();
-            CalculateLvl1.FillChartAllM(chartAllM);
-            CalculateLvl1.FillChartForecast(chartForecast);
-            CalculateLvl1.FillChartPhase(chartPhase);
-            CalculateLvl1.CalculateAccident(dataGridViewAccident);
+            CalculateLvl1 Calculated = new CalculateLvl1(CData.Table);
+            Calculated.FillChartAllM(chartAllM);
+            Calculated.FillChartPhase(chartPhase);
+            Calculated.CalculateAndFillAccident(dataGridView1lvlAccident);
+            Calculated.FillMAlpha(dataGridView1lvlMAlpha);
+            Calculated.FillForecast(dataGridView1lvlForecast);
+            MessageBox.Show("Декомпозиция просчитана", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //Нажание на Chart
+        private void chart_Click(object sender, EventArgs e)
+        {
+            Chart ch = sender as Chart;
+            FormChart frm = new FormChart(ch.Series, ch.ChartAreas[0].AxisX.Title, ch.ChartAreas[0].AxisY.Title, ch.Text);
+            frm.Visible = true;
+        }
+
+        // Изменение значения в Numeric
+        private void numericUpDownDecNumb_ValueChanged(object sender, EventArgs e)
+        {
+            CData.DecNumbToOutput = Convert.ToInt32((sender as NumericUpDown).Value);
+        }
+
+        private void buttonLvl2ApplyAllocation_Click(object sender, EventArgs e)
+        {
+            FormTemplateLvlCalc frm = new FormTemplateLvlCalc();
+            
         }
     }
 }

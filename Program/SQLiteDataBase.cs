@@ -11,9 +11,16 @@ using System.IO;
 
 namespace Coursework
 {
+    /// <summary>
+    /// Класс для работы с базой данных
+    /// </summary>
     class SQLiteDataBase
     {
         private SQLiteConnection SQLConn;
+
+        /// <summary>
+        /// Открыта ли база данных
+        /// </summary>
         public bool IsOpen { get { return dataBaseIsOpen; } }
         private bool dataBaseIsOpen;
 
@@ -24,6 +31,7 @@ namespace Coursework
         {
             dataBaseIsOpen = false;
         }
+
         /// <summary>
         /// Конструктор открытия БД по пути файла
         /// </summary>
@@ -32,6 +40,7 @@ namespace Coursework
         {
             OpenDB(fileName);
         }
+
         /// <summary>
         /// Выполнить запрос
         /// </summary>
@@ -47,6 +56,7 @@ namespace Coursework
                 throw new Exception("Ошибка выполнения запроса");
             }
         }
+
         /// <summary>
         /// Метод открытия базы данных по пути к файлу
         /// </summary>
@@ -61,6 +71,7 @@ namespace Coursework
             this.CorrectDB();
             dataBaseIsOpen = true;
         }
+
         /// <summary>
         /// Получить имена всех таблиц в базе данных
         /// </summary>
@@ -78,8 +89,10 @@ namespace Coursework
                     resultList.Add(tableReader[0].ToString());
                 }
             }
+            tableReader.Close();
             return resultList.ToArray();
         }
+
         /// <summary>
         /// Скорректировать данные в БД
         /// </summary>
@@ -99,8 +112,10 @@ namespace Coursework
                         RunQuery($"UPDATE [{tableName}] SET [{(string)colReader[1]}] = REPLACE([{(string)colReader[1]}], ',', '.');");
                     }
                 }
+                colReader.Close();
             }
         }
+
         /// <summary>
         /// Получить значение из таблицы в БД
         /// </summary>
@@ -117,16 +132,12 @@ namespace Coursework
             }
             catch
             {
-                MessageBox.Show(
-                    $"Ошибка чтения значения {valueName}",
-                    "Ошибка чтения",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                    );
+                MessageBox.Show($"Ошибка чтения значения {valueName}", "Ошибка чтения", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
             
         }
+
         /// <summary>
         /// Обновить значение в таблице в БД
         /// </summary>
@@ -138,18 +149,14 @@ namespace Coursework
         {
             try
             {
-                RunQuery($"UPDATE [{tableName}] SET [{valueName}] = {newValue} {addendumQuery};".Replace(',', '.')); //КОСТЫЛЬ
+                RunQuery($"UPDATE [{tableName}] SET [{valueName}] = {newValue.ToString().Replace(',', '.')} {addendumQuery};"); //ТУТ КОСТЫЛЬ
             }
             catch
             {
-                MessageBox.Show(
-                    $"Ошибка записи значения {valueName}",
-                    "Ошибка записи",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                    );
+                MessageBox.Show($"Ошибка записи значения {valueName}", "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Конвертация изображения в биты
         /// </summary>
@@ -165,6 +172,7 @@ namespace Coursework
                 return imageBytes;
             }
         }
+
         /// <summary>
         /// Конвертация набора битов в изрбражение
         /// </summary>
@@ -176,6 +184,7 @@ namespace Coursework
             Image image = Image.FromStream(ms);
             return image;
         }
+
         /// <summary>
         /// Сохранение изображения в таблицу
         /// </summary>
@@ -198,14 +207,10 @@ namespace Coursework
             }
             catch
             {
-                MessageBox.Show(
-                   "Ошибка сохранения изображения",
-                   "Ошибка чтения",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Error
-                   );
+                MessageBox.Show("Ошибка сохранения изображения", "Ошибка чтения", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Чтение изображения из БД
         /// </summary>
@@ -220,15 +225,28 @@ namespace Coursework
             } 
             catch
             {
-                MessageBox.Show(
-                   "Ошибка чтения изображения",
-                   "Ошибка чтения",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Error
-                   );
+                MessageBox.Show("Ошибка чтения изображения", "Ошибка чтения", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
+
+        /// <summary>
+        /// Функция заполнения двумерного списка Table значениями из DataTable
+        /// </summary>
+        /// <param name="dTable">DataTable из которого берутся значения</param>
+        private void FillTable(DataTable dTable)
+        {
+            CData.Table.Clear();
+            for (int i = 0; i < dTable.Rows.Count; i++)
+            {
+                CData.Table.Add(new List<double>());
+                for (int j = 0; j < dTable.Columns.Count; j++)
+                {
+                    CData.Table[i].Add(Convert.ToDouble(dTable.Rows[i].ItemArray[j]));
+                }
+            }
+        }
+
         /// <summary>
         /// Получить таблицу из БД
         /// </summary>
@@ -243,18 +261,15 @@ namespace Coursework
             try
             {
                 adapter.Fill(dTable);
+                FillTable(dTable);
             }
             catch
             {
-                MessageBox.Show(
-                   $"Ошибка чтения таблицы {tableName}",
-                   "Ошибка чтения",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Error
-                   );
+                MessageBox.Show($"Ошибка чтения таблицы {tableName}", "Ошибка чтения", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return dTable;
         }
+
         /// <summary>
         /// Обновить таблицу в БД
         /// </summary>
@@ -281,22 +296,14 @@ namespace Coursework
             try
             {
                 RunQuery(SQLQuery);
-                MessageBox.Show("Новая таблица сохранена в БД", 
-                    "Успешно", 
-                    MessageBoxButtons.OK, 
-                    MessageBoxIcon.Information
-                    );
+                MessageBox.Show("Новая таблица сохранена в БД", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(
-                   $"Ошибка сохранение новой таблицы {tableName}",
-                   "Ошибка сохранения",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Error
-                   );
+                MessageBox.Show($"Ошибка сохранение новой таблицы {tableName}", "Ошибка сохранения", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Метод закрытия базы даных
         /// </summary>

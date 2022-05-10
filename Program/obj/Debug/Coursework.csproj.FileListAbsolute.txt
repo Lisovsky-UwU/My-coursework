@@ -49,10 +49,12 @@ C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\bin\Debug\System.Data.SQLite.xml
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.csproj.AssemblyReference.cache
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.csproj.SuggestedBindingRedirects.cache
-C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.Form1.resources
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.Properties.Resources.resources
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.csproj.GenerateResource.cache
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.csproj.CoreCompileInputs.cache
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.csproj.CopyComplete
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.exe
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.pdb
+C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormChart.resources
+C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.MainForm.resources
+C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormTemplateLvlCalc.resources
