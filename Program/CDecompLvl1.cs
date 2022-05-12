@@ -12,19 +12,20 @@ namespace Coursework
     /// <summary>
     /// Алгоритм просчета 1 уровня
     /// </summary>
-    class CalculateLvl1
+    class CDecompLvl1
     {
-        private AlphaAndM M, MPlus, MMinus;
+        public AlphaAndM M { get; private set; }
+        private AlphaAndM MPlus, MMinus;
 
         /// <summary>
         /// Классический конструктор, требующий таблицу значений
         /// </summary>
         /// <param name="ValuesTable">Таблица значений для просчета</param>
-        public CalculateLvl1(List<List<decimal>> ValuesTable)
+        public CDecompLvl1(List<List<decimal>> ValuesTable)
         {
             M = new AlphaAndM(ValuesTable);
-            MPlus = new AlphaAndM(ValuesTable, -CData.T);
-            MMinus = new AlphaAndM(ValuesTable, +CData.T);
+            MPlus = new AlphaAndM(ValuesTable, +CData.T);
+            MMinus = new AlphaAndM(ValuesTable, -CData.T);
         }
 
         /// <summary>
@@ -34,12 +35,14 @@ namespace Coursework
         public void FillChartAllM(Chart chart)
         {
             chart.Series.Clear();
-            chart.Series.Add(GetSeries("M", M.M, M.Alpha));
-            chart.Series.Add(GetSeries("M+", MPlus.M, MPlus.Alpha));
-            chart.Series.Add(GetSeries("M-", MMinus.M, MMinus.Alpha));
-            chart.Series.Add(GetSeries("M прогноз", M.MForecast, M.AlphaForecast));
-            chart.Series.Add(GetSeries("M+ прогноз", MPlus.MForecast, MPlus.AlphaForecast));
-            chart.Series.Add(GetSeries("M- прогноз", MMinus.MForecast, MMinus.AlphaForecast));
+            chart.ChartAreas.Clear();
+            chart.ChartAreas.Add(CData.GetDefaultChartArea("M", "alpha"));
+            chart.Series.Add(CData.GetSeries("M", M.M, M.Alpha));
+            chart.Series.Add(CData.GetSeries("M+", MPlus.M, MPlus.Alpha));
+            chart.Series.Add(CData.GetSeries("M-", MMinus.M, MMinus.Alpha));
+            chart.Series.Add(CData.GetSeries("M прогноз", M.MForecast, M.AlphaForecast));
+            chart.Series.Add(CData.GetSeries("M+ прогноз", MPlus.MForecast, MPlus.AlphaForecast));
+            chart.Series.Add(CData.GetSeries("M- прогноз", MMinus.MForecast, MMinus.AlphaForecast));
         }
 
         /// <summary>
@@ -49,43 +52,12 @@ namespace Coursework
         public void FillChartPhase(Chart chart)
         {
             chart.Series.Clear();
-            chart.Series.Add(GetSeries("M", M.M));
-            chart.Series.Add(GetSeries("M+", MPlus.M));
-            chart.Series.Add(GetSeries("M-", MMinus.M));
-            chart.Series.Add(GetSeries("M прогноз", M.MForecast));
-        }
-
-        /// <summary>
-        /// Фунуция для создания серии по значениям только для Y
-        /// </summary>
-        /// <param name="serName">Название серии</param>
-        /// <param name="dataY">Значения по Y</param>
-        /// <returns>Вернет серию для Chart</returns>
-        private Series GetSeries(string serName, List<decimal> dataY)
-        {
-            Series newSer = new Series(serName) { ChartType = SeriesChartType.Spline };
-            for (int i = 0; i < dataY.Count; i++)
-            {
-                newSer.Points.AddXY(i + 1, dataY[i]);
-            }
-            return newSer;
-        }
-
-        /// <summary>
-        /// Функция для создания серии по значениям для X и Y
-        /// </summary>
-        /// <param name="serName">Название серии</param>
-        /// <param name="dataX">Значения для X</param>
-        /// <param name="dataY">Значения для Y</param>
-        /// <returns>Вернет серию для Chart</returns>
-        private Series GetSeries(string serName, List<decimal> dataX, List<decimal> dataY)
-        {
-            Series newSer = new Series(serName) { ChartType = SeriesChartType.Spline };
-            for (int i = 0; i < dataX.Count; i++)
-            {
-                newSer.Points.AddXY(dataX[i], dataY[i]);
-            }
-            return newSer;
+            chart.ChartAreas.Clear();
+            chart.ChartAreas.Add(CData.GetDefaultChartArea("t", "M"));
+            chart.Series.Add(CData.GetSeries("M", M.M));
+            chart.Series.Add(CData.GetSeries("M+", MPlus.M));
+            chart.Series.Add(CData.GetSeries("M-", MMinus.M));
+            chart.Series.Add(CData.GetSeries("M прогноз", M.MForecast));
         }
 
         /// <summary>

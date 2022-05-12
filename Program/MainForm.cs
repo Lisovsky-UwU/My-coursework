@@ -14,6 +14,19 @@ namespace Coursework
 {
     public partial class MainForm : Form
     {
+        /*                       Данные для 1 уровня декомпозиции                       */
+        CDecompLvl1 Lvl1Data;                   //Данные для 1 уровня декомпозиции
+
+
+        /*                       Данные для 2 уровня декомпозиции                       */
+        private int Lvl2BlocksCount;            //Количество блоков
+        private List<int>[] Lvl2PointsStorage;  //Массив с распределенными точками в ListBox
+        private int SelectedIndexToDrop;        //Индекс элемента взятого для переноса
+        private string SourceName;              //Имя источника откуда выполняется перенос
+        CDecompLvl2 Lvl2Data;                   //Данные для 2 уровня декомпозиции
+
+
+        /*                          Функционал для всей формы                           */
         public MainForm()
         {
             InitializeComponent();
@@ -24,9 +37,7 @@ namespace Coursework
             numericUpDownDecNumb.Value = CData.DecNumbToOutput;
         }
 
-        /// <summary>
-        /// Открыть базу данных с помощью файлового диалога
-        /// </summary>
+        // Открыть базу данных с помощью файлового диалога </summary>
         private void OpenDataBaseWithFileDialog()
         {
             OpenFileDialog fileDialog = new OpenFileDialog
@@ -43,24 +54,28 @@ namespace Coursework
             }
         }
 
-        /// <summary>
-        /// Закрыть базу данных
-        /// </summary>
+        // Закрыть базу данных
         private void CloseDB()
         {
             dataGridViewData.Rows.Clear();
             dataGridViewData.Columns.Clear();
             comboBoxTable.Items.Clear();
             comboBoxTable.Enabled = false;
+            comboBoxTable.Text = "";
             textBoxT.Text = "";
             textBoxT.Enabled = false;
             textBoxA.Text = "";
             textBoxA.Enabled = false;
-            pictureBoxInData = null;
-            pictureBoxLvl1 = null;
             buttonAddRow.Enabled = false;
             buttonDeleteRows.Enabled = false;
-            buttonCalculateDecomp.Enabled = false;
+            buttonLvl1Calculate.Enabled = false;
+            buttonLvl2ApplyAllocation.Enabled = false;
+            ToolStripSaveDB.Enabled = false;
+            ToolStripCloseDB.Enabled = false;
+            ToolStripUpdateImage.Enabled = false;
+            ToolStripAddRow.Enabled = false;
+            numericUpDownDecNumb.Enabled = false;
+            numericUpDownLvl2NumbBlocks.Enabled = false;
             CRequest.CloseDB();
         }
 
@@ -70,13 +85,20 @@ namespace Coursework
             OpenDataBaseWithFileDialog();            
             if (CRequest.DBIsOpen == true)
             {
+                ToolStripSaveDB.Enabled = true;
+                ToolStripCloseDB.Enabled = true;
+                ToolStripUpdateImage.Enabled = true;
+
+                Image img = CRequest.IMG;
+                pictureBoxInData.Image = img;
+                pictureBoxLvl1.Image = img;
+                pictureBoxLvl2.Image = img;
+
                 textBoxT.Text = CData.T.ToString();
                 textBoxT.Enabled = true;
                 textBoxA.Text = CData.A.ToString();
                 textBoxA.Enabled = true;
-                pictureBoxInData.Image = CRequest.IMG;
-                pictureBoxLvl1.Image = CRequest.IMG;
-                pictureBoxLvl2.Image = CRequest.IMG;
+                
                 comboBoxTable.Items.AddRange(CRequest.TableNames);
                 if (comboBoxTable.Items.Count != 0)
                 {
@@ -85,7 +107,11 @@ namespace Coursework
                     CRequest.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
                     buttonAddRow.Enabled = true;
                     buttonDeleteRows.Enabled = true;
-                    buttonCalculateDecomp.Enabled = true;
+                    buttonLvl1Calculate.Enabled = true;
+                    buttonLvl2ApplyAllocation.Enabled = true;
+                    ToolStripAddRow.Enabled = true;
+                    numericUpDownLvl2NumbBlocks.Enabled = true;
+                    numericUpDownDecNumb.Enabled = true;
                 }
             }
         }
@@ -116,7 +142,11 @@ namespace Coursework
         {
             char symbol = e.KeyChar;
             // 8 - backspace
-            if (Char.IsDigit(symbol) == false && symbol != ',' && e.KeyChar != 8)
+            if (Char.IsDigit(symbol) == false && e.KeyChar != 8 && symbol != ',')
+            {
+                e.Handled = true;
+            }
+            else if (symbol == ',' && (sender as TextBox).Text.Contains(',') == true)
             {
                 e.Handled = true;
             }
@@ -126,21 +156,41 @@ namespace Coursework
         private void textBoxT_TextChanged(object sender, EventArgs e)
         {
             TextBox tb = (sender as TextBox);
-            if (tb.Text != "" && tb.Text[tb.Text.Length - 1] != ',' && tb.Text[tb.Text.Length - 1] != '0')
+            try
             {
                 CRequest.WriteT(Convert.ToDecimal(tb.Text));
             }
+            catch { }
         }
 
         // Изменение значения в TextBox для A
         private void textBoxA_TextChanged(object sender, EventArgs e)
         {
             TextBox tb = (sender as TextBox);
-            if (tb.Text != "" && tb.Text[tb.Text.Length - 1] != ',' && tb.Text[tb.Text.Length - 1] != '0')
+            try
             {
                 CRequest.WriteA(Convert.ToDecimal(tb.Text));
             }
+            catch { }
         }
+
+        // Нажание на Chart
+        private void chart_Click(object sender, EventArgs e)
+        {
+            Chart ch = sender as Chart;
+            FormChart frm = new FormChart(ch.Series, ch.ChartAreas[0].AxisX.Title, ch.ChartAreas[0].AxisY.Title, ch.Text);
+            frm.Visible = true;
+        }
+
+        // Нажатие на картинку
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            FormImage frm = new FormImage((sender as PictureBox).Image);
+            frm.Show();
+        }
+
+
+        /*                       Функционал для вкладки с данными                       */
 
         // Изменение выбранной таблицы
         private void comboBoxTable_SelectedIndexChanged(object sender, EventArgs e)
@@ -166,42 +216,36 @@ namespace Coursework
             CRequest.SaveTable();
         }
 
-        // Кнопка подсчета декомпозиций
-        private void buttonCalculateDecomp_Click(object sender, EventArgs e)
-        {
-            CalculateLvl1 Calculated = new CalculateLvl1(CData.Table);
-            Calculated.FillChartAllM(chartLvl1AllM);
-            Calculated.FillChartPhase(chartLvl1Phase);
-            Calculated.CalculateAndFillAccident(dataGridView1lvlAccident);
-            Calculated.FillMAlpha(dataGridView1lvlMAlpha);
-            Calculated.FillForecast(dataGridView1lvlForecast);
-            tabControl1lvlTable.Enabled = true;
-            chartLvl1AllM.Enabled = true;
-            chartLvl1Phase.Enabled = true;
-            MessageBox.Show("Декомпозиция просчитана", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        //Нажание на Chart
-        private void chart_Click(object sender, EventArgs e)
-        {
-            Chart ch = sender as Chart;
-            FormChart frm = new FormChart(ch.Series, ch.ChartAreas[0].AxisX.Title, ch.ChartAreas[0].AxisY.Title, ch.Text);
-            frm.Visible = true;
-        }
-
         // Изменение значения в Numeric
         private void numericUpDownDecNumb_ValueChanged(object sender, EventArgs e)
         {
             CData.DecNumbToOutput = Convert.ToInt32((sender as NumericUpDown).Value);
         }
 
-        private int Lvl2BlocksCount;
-        private CalculateLvl1[] Lvl2Data;
-        private List<int>[] Lvl2PointsStorage;
+
+        /*                 Функционал для вкладки 1 уровня декомпозиции                 */
+
+        // Кнопка подсчета 1 уровня декомпозиции
+        private void buttonLvl1Calculate_Click(object sender, EventArgs e)
+        {
+            Lvl1Data = new CDecompLvl1(CData.Table);
+            Lvl1Data.FillChartAllM(chartLvl1AllM);
+            Lvl1Data.FillChartPhase(chartLvl1Phase);
+            Lvl1Data.CalculateAndFillAccident(dataGridView1lvlAccident);
+            Lvl1Data.FillMAlpha(dataGridView1lvlMAlpha);
+            Lvl1Data.FillForecast(dataGridView1lvlForecast);
+            tabControl1lvlTable.Enabled = true;
+            chartLvl1AllM.Enabled = true;
+            chartLvl1Phase.Enabled = true;
+        }
+
+
+        /*                 Функционал для вкладки 2 уровня декомпозиции                 */
+
+        // Применить введенное количество блоков
         private void buttonLvl2ApplyAllocation_Click(object sender, EventArgs e)
         {
             Lvl2BlocksCount = Convert.ToInt32(numericUpDownLvl2NumbBlocks.Value);
-            Lvl2Data = new CalculateLvl1[Lvl2BlocksCount];
             Lvl2PointsStorage = new List<int>[Lvl2BlocksCount + 1];
 
             comboBoxLvl2Block.Items.Clear();
@@ -229,8 +273,7 @@ namespace Coursework
             buttonLvl2Calc.Enabled = true;
         }
 
-        private int SelectedIndexToDrop;
-        private string SourceName;
+        // Событие нажатия для переноса
         private void listBoxLvl2Points_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -245,6 +288,7 @@ namespace Coursework
             }
         }
 
+        // Событие Drop для переноса
         private void listBoxLvl2Points_DragDrop(object sender, DragEventArgs e)
         {
             ListBox listBox = sender as ListBox;
@@ -274,6 +318,7 @@ namespace Coursework
             (panelLvl2AllocationListsBox.Controls[SourceName] as ListBox).Items.RemoveAt(SelectedIndexToDrop);
         }
 
+        // Событие входа для переноса
         private void listBoxLvl2Points_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
@@ -282,6 +327,7 @@ namespace Coursework
                 e.Effect = DragDropEffects.None;
         }
 
+        // Изменение выбранного блока
         private void comboBoxLvl2Block_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBoxLvl2BlockPoints.Items.Clear();
@@ -291,6 +337,7 @@ namespace Coursework
             }
         }
 
+        // Кнопка сворачивания
         private void buttonLvl2Minimaze_Click(object sender, EventArgs e)
         {
             if (buttonLvl2Minimaze.Text == "<")
@@ -305,6 +352,7 @@ namespace Coursework
             }
         }
 
+        // Кнопка подсчета 2 уровня
         private void buttonLvl2Calc_Click(object sender, EventArgs e)
         {
             for (int i = 1; i < Lvl2BlocksCount; i++)
@@ -315,38 +363,35 @@ namespace Coursework
                     return;
                 }
             }
-            Lvl2Data = new CalculateLvl1[Lvl2BlocksCount];
 
-            for (int i = 0; i < Lvl2BlocksCount; i++)
-            {
-                List<List<decimal>> newTable = new List<List<decimal>>();
-                for (int j = 0; j < CData.Table.Count; j++)
-                {
-                    newTable.Add(new List<decimal>());
-                    for (int k = 0; k < Lvl2PointsStorage[i].Count; k++)
-                    {
-                        newTable[j].Add(CData.Table[j][Lvl2PointsStorage[i][k]]);
-                    }
-                }
-                Lvl2Data[i] = new CalculateLvl1(newTable);
-            }
+            Lvl2Data = new CDecompLvl2(Lvl2PointsStorage);
 
             comboBoxLvl2SelectedBlock.Enabled = true;
             comboBoxLvl2SelectedBlock.SelectedIndex = 0;
+            SelectedViewBlockChanged(0);
 
             chartLvl2AllM.Enabled = true;
             chartLvl2Phase.Enabled = true;
+            chartLvl2AllBlocks.Enabled = true;
             tabControlLvl2Tables.Enabled = true;
-        }
 
-        private void comboBoxLvl2SelectedBlock_SelectedIndexChanged(object sender, EventArgs e)
+            Lvl2Data.FillChart(chartLvl2AllBlocks);
+        }
+        
+        // Изменение выбранного блока для отображения
+        private void SelectedViewBlockChanged(int index)
         {
-            int index = comboBoxLvl2SelectedBlock.SelectedIndex;
             Lvl2Data[index].FillChartPhase(chartLvl2Phase);
             Lvl2Data[index].FillChartAllM(chartLvl2AllM);
             Lvl2Data[index].FillMAlpha(dataGridViewLvl2MAlpha);
             Lvl2Data[index].FillForecast(dataGridViewLvl2Forecast);
             Lvl2Data[index].CalculateAndFillAccident(dataGridViewLvl2Accident);
+        }
+
+        // Изменение выбранного блока для отображения в ComboBox
+        private void comboBoxLvl2SelectedBlock_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedViewBlockChanged(comboBoxLvl2SelectedBlock.SelectedIndex);
         }
     }
 }

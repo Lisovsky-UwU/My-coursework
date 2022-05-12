@@ -42,6 +42,9 @@ namespace Coursework
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxT = new System.Windows.Forms.TextBox();
@@ -81,7 +84,7 @@ namespace Coursework
             this.tabForecast = new System.Windows.Forms.TabPage();
             this.dataGridView1lvlForecast = new System.Windows.Forms.DataGridView();
             this.pictureBoxLvl1 = new System.Windows.Forms.PictureBox();
-            this.buttonCalculateDecomp = new System.Windows.Forms.Button();
+            this.buttonLvl1Calculate = new System.Windows.Forms.Button();
             this.tabPageLvl2 = new System.Windows.Forms.TabPage();
             this.panelLvl2Main = new System.Windows.Forms.Panel();
             this.panelLvl2Charts = new System.Windows.Forms.Panel();
@@ -95,6 +98,7 @@ namespace Coursework
             this.tabPageForecast = new System.Windows.Forms.TabPage();
             this.dataGridViewLvl2Forecast = new System.Windows.Forms.DataGridView();
             this.panelLvl2DopInfo = new System.Windows.Forms.Panel();
+            this.chartLvl2AllBlocks = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.buttonLvl2Minimaze = new System.Windows.Forms.Button();
             this.comboBoxLvl2SelectedBlock = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -145,6 +149,7 @@ namespace Coursework
             this.tabPageForecast.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLvl2Forecast)).BeginInit();
             this.panelLvl2DopInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLvl2AllBlocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLvl2)).BeginInit();
             this.panelLvl2Allocation.SuspendLayout();
             this.panelLvl2AllocationListsBox.SuspendLayout();
@@ -226,6 +231,7 @@ namespace Coursework
             // ToolStripSaveDB
             // 
             this.ToolStripSaveDB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ToolStripSaveDB.Enabled = false;
             this.ToolStripSaveDB.Name = "ToolStripSaveDB";
             this.ToolStripSaveDB.Size = new System.Drawing.Size(151, 22);
             this.ToolStripSaveDB.Text = "Сохранить БД";
@@ -239,6 +245,7 @@ namespace Coursework
             // ToolStripCloseDB
             // 
             this.ToolStripCloseDB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ToolStripCloseDB.Enabled = false;
             this.ToolStripCloseDB.Name = "ToolStripCloseDB";
             this.ToolStripCloseDB.Size = new System.Drawing.Size(151, 22);
             this.ToolStripCloseDB.Text = "Закрыть БД";
@@ -258,6 +265,7 @@ namespace Coursework
             // 
             // ToolStripUpdateImage
             // 
+            this.ToolStripUpdateImage.Enabled = false;
             this.ToolStripUpdateImage.Name = "ToolStripUpdateImage";
             this.ToolStripUpdateImage.Size = new System.Drawing.Size(205, 22);
             this.ToolStripUpdateImage.Text = "Обновить изображение";
@@ -265,6 +273,7 @@ namespace Coursework
             // 
             // ToolStripAddRow
             // 
+            this.ToolStripAddRow.Enabled = false;
             this.ToolStripAddRow.Name = "ToolStripAddRow";
             this.ToolStripAddRow.Size = new System.Drawing.Size(205, 22);
             this.ToolStripAddRow.Text = "Добавить строку";
@@ -309,9 +318,9 @@ namespace Coursework
             // 
             this.panelDataLeftPanel.Controls.Add(this.dataGridViewData);
             this.panelDataLeftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataLeftPanel.Location = new System.Drawing.Point(353, 3);
+            this.panelDataLeftPanel.Location = new System.Drawing.Point(263, 3);
             this.panelDataLeftPanel.Name = "panelDataLeftPanel";
-            this.panelDataLeftPanel.Size = new System.Drawing.Size(620, 408);
+            this.panelDataLeftPanel.Size = new System.Drawing.Size(710, 408);
             this.panelDataLeftPanel.TabIndex = 9;
             // 
             // dataGridViewData
@@ -325,7 +334,7 @@ namespace Coursework
             this.dataGridViewData.Margin = new System.Windows.Forms.Padding(3, 30, 3, 30);
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            this.dataGridViewData.Size = new System.Drawing.Size(620, 408);
+            this.dataGridViewData.Size = new System.Drawing.Size(710, 408);
             this.dataGridViewData.TabIndex = 0;
             // 
             // panelDataTable
@@ -340,13 +349,13 @@ namespace Coursework
             this.panelDataTable.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDataTable.Location = new System.Drawing.Point(3, 3);
             this.panelDataTable.Name = "panelDataTable";
-            this.panelDataTable.Size = new System.Drawing.Size(350, 408);
+            this.panelDataTable.Size = new System.Drawing.Size(260, 408);
             this.panelDataTable.TabIndex = 8;
             // 
             // buttonDeleteRows
             // 
             this.buttonDeleteRows.Enabled = false;
-            this.buttonDeleteRows.Location = new System.Drawing.Point(208, 35);
+            this.buttonDeleteRows.Location = new System.Drawing.Point(129, 35);
             this.buttonDeleteRows.Name = "buttonDeleteRows";
             this.buttonDeleteRows.Size = new System.Drawing.Size(115, 23);
             this.buttonDeleteRows.TabIndex = 3;
@@ -366,7 +375,7 @@ namespace Coursework
             // buttonAddRow
             // 
             this.buttonAddRow.Enabled = false;
-            this.buttonAddRow.Location = new System.Drawing.Point(208, 6);
+            this.buttonAddRow.Location = new System.Drawing.Point(8, 35);
             this.buttonAddRow.Name = "buttonAddRow";
             this.buttonAddRow.Size = new System.Drawing.Size(115, 23);
             this.buttonAddRow.TabIndex = 2;
@@ -380,32 +389,35 @@ namespace Coursework
             this.comboBoxTable.FormattingEnabled = true;
             this.comboBoxTable.Location = new System.Drawing.Point(61, 8);
             this.comboBoxTable.Name = "comboBoxTable";
-            this.comboBoxTable.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTable.Size = new System.Drawing.Size(183, 21);
             this.comboBoxTable.TabIndex = 4;
             this.comboBoxTable.SelectedIndexChanged += new System.EventHandler(this.comboBoxTable_SelectedIndexChanged);
             // 
             // pictureBoxInData
             // 
+            this.pictureBoxInData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxInData.Image = global::Coursework.Properties.Resources.No_image_available_svg;
-            this.pictureBoxInData.Location = new System.Drawing.Point(3, 64);
+            this.pictureBoxInData.Location = new System.Drawing.Point(8, 64);
             this.pictureBoxInData.Name = "pictureBoxInData";
-            this.pictureBoxInData.Size = new System.Drawing.Size(343, 235);
+            this.pictureBoxInData.Size = new System.Drawing.Size(236, 165);
             this.pictureBoxInData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxInData.TabIndex = 1;
             this.pictureBoxInData.TabStop = false;
+            this.pictureBoxInData.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // numericUpDownDecNumb
             // 
-            this.numericUpDownDecNumb.Location = new System.Drawing.Point(215, 321);
+            this.numericUpDownDecNumb.Enabled = false;
+            this.numericUpDownDecNumb.Location = new System.Drawing.Point(193, 244);
             this.numericUpDownDecNumb.Name = "numericUpDownDecNumb";
-            this.numericUpDownDecNumb.Size = new System.Drawing.Size(87, 20);
+            this.numericUpDownDecNumb.Size = new System.Drawing.Size(51, 20);
             this.numericUpDownDecNumb.TabIndex = 6;
             this.numericUpDownDecNumb.ValueChanged += new System.EventHandler(this.numericUpDownDecNumb_ValueChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 323);
+            this.label4.Location = new System.Drawing.Point(5, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 13);
             this.label4.TabIndex = 7;
@@ -509,7 +521,7 @@ namespace Coursework
             // 
             this.panelLvl1Main.Controls.Add(this.tabControl1lvlTable);
             this.panelLvl1Main.Controls.Add(this.pictureBoxLvl1);
-            this.panelLvl1Main.Controls.Add(this.buttonCalculateDecomp);
+            this.panelLvl1Main.Controls.Add(this.buttonLvl1Calculate);
             this.panelLvl1Main.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLvl1Main.Location = new System.Drawing.Point(3, 3);
             this.panelLvl1Main.Name = "panelLvl1Main";
@@ -608,24 +620,26 @@ namespace Coursework
             // 
             // pictureBoxLvl1
             // 
+            this.pictureBoxLvl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxLvl1.Image = global::Coursework.Properties.Resources.No_image_available_svg;
             this.pictureBoxLvl1.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxLvl1.Name = "pictureBoxLvl1";
-            this.pictureBoxLvl1.Size = new System.Drawing.Size(256, 185);
+            this.pictureBoxLvl1.Size = new System.Drawing.Size(256, 161);
             this.pictureBoxLvl1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLvl1.TabIndex = 2;
             this.pictureBoxLvl1.TabStop = false;
+            this.pictureBoxLvl1.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // buttonCalculateDecomp
+            // buttonLvl1Calculate
             // 
-            this.buttonCalculateDecomp.Enabled = false;
-            this.buttonCalculateDecomp.Location = new System.Drawing.Point(7, 204);
-            this.buttonCalculateDecomp.Name = "buttonCalculateDecomp";
-            this.buttonCalculateDecomp.Size = new System.Drawing.Size(249, 38);
-            this.buttonCalculateDecomp.TabIndex = 5;
-            this.buttonCalculateDecomp.Text = "Вычислить 1 уровень";
-            this.buttonCalculateDecomp.UseVisualStyleBackColor = true;
-            this.buttonCalculateDecomp.Click += new System.EventHandler(this.buttonCalculateDecomp_Click);
+            this.buttonLvl1Calculate.Enabled = false;
+            this.buttonLvl1Calculate.Location = new System.Drawing.Point(3, 170);
+            this.buttonLvl1Calculate.Name = "buttonLvl1Calculate";
+            this.buttonLvl1Calculate.Size = new System.Drawing.Size(256, 38);
+            this.buttonLvl1Calculate.TabIndex = 5;
+            this.buttonLvl1Calculate.Text = "Вычислить 1 уровень";
+            this.buttonLvl1Calculate.UseVisualStyleBackColor = true;
+            this.buttonLvl1Calculate.Click += new System.EventHandler(this.buttonLvl1Calculate_Click);
             // 
             // tabPageLvl2
             // 
@@ -728,7 +742,7 @@ namespace Coursework
             this.chartLvl2Phase.Series.Add(series4);
             this.chartLvl2Phase.Size = new System.Drawing.Size(234, 204);
             this.chartLvl2Phase.TabIndex = 3;
-            this.chartLvl2Phase.Text = "1 уровень - график отклика";
+            this.chartLvl2Phase.Text = "2 уровень - график отклика";
             this.chartLvl2Phase.Click += new System.EventHandler(this.chart_Click);
             // 
             // tabControlLvl2Tables
@@ -823,6 +837,7 @@ namespace Coursework
             // 
             // panelLvl2DopInfo
             // 
+            this.panelLvl2DopInfo.Controls.Add(this.chartLvl2AllBlocks);
             this.panelLvl2DopInfo.Controls.Add(this.buttonLvl2Minimaze);
             this.panelLvl2DopInfo.Controls.Add(this.comboBoxLvl2SelectedBlock);
             this.panelLvl2DopInfo.Controls.Add(this.label7);
@@ -833,6 +848,41 @@ namespace Coursework
             this.panelLvl2DopInfo.Name = "panelLvl2DopInfo";
             this.panelLvl2DopInfo.Size = new System.Drawing.Size(221, 414);
             this.panelLvl2DopInfo.TabIndex = 8;
+            // 
+            // chartLvl2AllBlocks
+            // 
+            chartArea5.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea5.AxisX.IsStartedFromZero = false;
+            chartArea5.AxisX.LabelStyle.Enabled = false;
+            chartArea5.AxisX.MajorGrid.Enabled = false;
+            chartArea5.AxisX.MajorTickMark.Enabled = false;
+            chartArea5.AxisX.Title = "M";
+            chartArea5.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea5.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea5.AxisY.IsStartedFromZero = false;
+            chartArea5.AxisY.LabelStyle.Enabled = false;
+            chartArea5.AxisY.MajorGrid.Enabled = false;
+            chartArea5.AxisY.MajorTickMark.Enabled = false;
+            chartArea5.AxisY.Title = "alpha";
+            chartArea5.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea5.Name = "ChartArea1";
+            this.chartLvl2AllBlocks.ChartAreas.Add(chartArea5);
+            this.chartLvl2AllBlocks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chartLvl2AllBlocks.Enabled = false;
+            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend5.Name = "Legend1";
+            this.chartLvl2AllBlocks.Legends.Add(legend5);
+            this.chartLvl2AllBlocks.Location = new System.Drawing.Point(6, 228);
+            this.chartLvl2AllBlocks.Name = "chartLvl2AllBlocks";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartLvl2AllBlocks.Series.Add(series5);
+            this.chartLvl2AllBlocks.Size = new System.Drawing.Size(209, 153);
+            this.chartLvl2AllBlocks.TabIndex = 8;
+            this.chartLvl2AllBlocks.Text = "2 уровень - график всех блоков";
+            this.chartLvl2AllBlocks.Click += new System.EventHandler(this.chart_Click);
             // 
             // buttonLvl2Minimaze
             // 
@@ -878,6 +928,7 @@ namespace Coursework
             // 
             // pictureBoxLvl2
             // 
+            this.pictureBoxLvl2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxLvl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxLvl2.Image = global::Coursework.Properties.Resources.No_image_available_svg;
             this.pictureBoxLvl2.Location = new System.Drawing.Point(0, 0);
@@ -886,6 +937,7 @@ namespace Coursework
             this.pictureBoxLvl2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLvl2.TabIndex = 0;
             this.pictureBoxLvl2.TabStop = false;
+            this.pictureBoxLvl2.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // panelLvl2Allocation
             // 
@@ -959,6 +1011,7 @@ namespace Coursework
             // 
             // buttonLvl2ApplyAllocation
             // 
+            this.buttonLvl2ApplyAllocation.Enabled = false;
             this.buttonLvl2ApplyAllocation.Location = new System.Drawing.Point(11, 39);
             this.buttonLvl2ApplyAllocation.Name = "buttonLvl2ApplyAllocation";
             this.buttonLvl2ApplyAllocation.Size = new System.Drawing.Size(105, 42);
@@ -988,6 +1041,7 @@ namespace Coursework
             // 
             // numericUpDownLvl2NumbBlocks
             // 
+            this.numericUpDownLvl2NumbBlocks.Enabled = false;
             this.numericUpDownLvl2NumbBlocks.Location = new System.Drawing.Point(142, 13);
             this.numericUpDownLvl2NumbBlocks.Maximum = new decimal(new int[] {
             10,
@@ -1018,7 +1072,7 @@ namespace Coursework
             this.Controls.Add(this.toolStrip1);
             this.MinimumSize = new System.Drawing.Size(1000, 540);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Просчет аварийности";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -1059,6 +1113,7 @@ namespace Coursework
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLvl2Forecast)).EndInit();
             this.panelLvl2DopInfo.ResumeLayout(false);
             this.panelLvl2DopInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLvl2AllBlocks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLvl2)).EndInit();
             this.panelLvl2Allocation.ResumeLayout(false);
             this.panelLvl2AllocationListsBox.ResumeLayout(false);
@@ -1096,7 +1151,7 @@ namespace Coursework
         private System.Windows.Forms.ComboBox comboBoxTable;
         private System.Windows.Forms.PictureBox pictureBoxLvl1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartLvl1Phase;
-        private System.Windows.Forms.Button buttonCalculateDecomp;
+        private System.Windows.Forms.Button buttonLvl1Calculate;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartLvl1AllM;
         private System.Windows.Forms.DataGridView dataGridView1lvlAccident;
         private System.Windows.Forms.TabControl tabControl1lvlTable;
@@ -1139,6 +1194,7 @@ namespace Coursework
         private System.Windows.Forms.Button buttonLvl2Minimaze;
         private System.Windows.Forms.Panel panelLvl2AllocationControls;
         private System.Windows.Forms.Panel panelLvl2AllocationListsBox;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartLvl2AllBlocks;
     }
 }
 

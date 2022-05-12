@@ -47,7 +47,7 @@ namespace Coursework
             int top = 19;
             for (int i = 0; i < seriesCollection.Count; i++)
             {
-                seriesCheckBox[i] = new CheckBox() { Parent = groupBox3 };
+                seriesCheckBox[i] = new CheckBox() { Parent = groupBoxSeriesVisible };
                 seriesCheckBox[i].Checked = true;
                 seriesCheckBox[i].Text = seriesCollection[i].Name;
                 seriesCheckBox[i].Tag = i;
@@ -164,6 +164,24 @@ namespace Coursework
         {
             CheckBox cb = sender as CheckBox;
             chartVis.Series[Convert.ToInt32(cb.Tag)].Enabled = cb.Checked;
+        }
+
+        // Измненеие типа линий
+        private void comboBoxLinesType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SeriesChartType newType;
+            if (comboBoxLinesType.SelectedIndex == 0)
+            {
+                newType = SeriesChartType.Spline;
+            }
+            else
+            {
+                newType = SeriesChartType.Line;
+            }
+            ChangeAllSeries((i, j) =>
+            {
+                chartVis.Series[i].ChartType = newType;
+            });
         }
     }
 }

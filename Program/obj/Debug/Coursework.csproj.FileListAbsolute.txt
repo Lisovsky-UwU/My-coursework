@@ -57,3 +57,4 @@ C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.pdb
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormChart.resources
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.MainForm.resources
+C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormImage.resources
