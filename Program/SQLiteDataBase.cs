@@ -122,13 +122,13 @@ namespace Coursework
         /// <param name="tableName">Имя таблицы</param>
         /// <param name="valueName">Имя значения</param>
         /// <returns>Первое значение в столбце</returns>
-        public double GetValue(string tableName, string valueName)
+        public decimal GetValue(string tableName, string valueName)
         {
             string SQLQuery = $"SELECT [{valueName}] FROM [{tableName}];";
             SQLiteCommand command = new SQLiteCommand(SQLQuery, SQLConn);
             try
             {
-                return Convert.ToDouble(command.ExecuteScalar());
+                return Convert.ToDecimal(command.ExecuteScalar());
             }
             catch
             {
@@ -145,7 +145,7 @@ namespace Coursework
         /// <param name="valueName">Имя значения</param>
         /// <param name="newValue">Новое значение</param>
         /// <param name="addendumQuery">Дополнительные параметры к запросу</param>
-        public void UpdateValue(string tableName, string valueName, double newValue, string addendumQuery = "")
+        public void UpdateValue(string tableName, string valueName, decimal newValue, string addendumQuery = "")
         {
             try
             {
@@ -239,10 +239,10 @@ namespace Coursework
             CData.Table.Clear();
             for (int i = 0; i < dTable.Rows.Count; i++)
             {
-                CData.Table.Add(new List<double>());
+                CData.Table.Add(new List<decimal>());
                 for (int j = 1; j < dTable.Columns.Count; j++)
                 {
-                    CData.Table[i].Add(Convert.ToDouble(dTable.Rows[i].ItemArray[j]));
+                    CData.Table[i].Add(Convert.ToDecimal(dTable.Rows[i].ItemArray[j]));
                 }
             }
         }

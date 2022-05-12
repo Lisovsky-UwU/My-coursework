@@ -20,7 +20,7 @@ namespace Coursework
         /// Классический конструктор, требующий таблицу значений
         /// </summary>
         /// <param name="ValuesTable">Таблица значений для просчета</param>
-        public CalculateLvl1(List<List<double>> ValuesTable)
+        public CalculateLvl1(List<List<decimal>> ValuesTable)
         {
             M = new AlphaAndM(ValuesTable);
             MPlus = new AlphaAndM(ValuesTable, -CData.T);
@@ -61,7 +61,7 @@ namespace Coursework
         /// <param name="serName">Название серии</param>
         /// <param name="dataY">Значения по Y</param>
         /// <returns>Вернет серию для Chart</returns>
-        private Series GetSeries(string serName, List<double> dataY)
+        private Series GetSeries(string serName, List<decimal> dataY)
         {
             Series newSer = new Series(serName) { ChartType = SeriesChartType.Spline };
             for (int i = 0; i < dataY.Count; i++)
@@ -78,7 +78,7 @@ namespace Coursework
         /// <param name="dataX">Значения для X</param>
         /// <param name="dataY">Значения для Y</param>
         /// <returns>Вернет серию для Chart</returns>
-        private Series GetSeries(string serName, List<double> dataX, List<double> dataY)
+        private Series GetSeries(string serName, List<decimal> dataX, List<decimal> dataY)
         {
             Series newSer = new Series(serName) { ChartType = SeriesChartType.Spline };
             for (int i = 0; i < dataX.Count; i++)
@@ -165,10 +165,10 @@ namespace Coursework
         }
 
         // Функция для заполнения строки для таблицы аварийности
-        private void ChangeDataRow(DataGridViewRow row, string number, double Mm, double M, double Mp, double Mzero)
+        private void ChangeDataRow(DataGridViewRow row, string number, decimal Mm, decimal M, decimal Mp, decimal Mzero)
         {
-            double R = Math.Abs((Mp - Mm) / 2);
-            double L = Math.Abs(M - Mzero);
+            decimal R = DecimalMath.Abs((Mp - Mm) / 2);
+            decimal L = DecimalMath.Abs(M - Mzero);
             row.Cells["Эпоха"].Value = number;
             row.Cells["R"].Value = CData.Round(R);
             row.Cells["L"].Value = CData.Round(L);
@@ -188,7 +188,7 @@ namespace Coursework
         }
 
         // Функция для заполнения строк для значения вектора
-        private void FillMAlphaRow(DataGridView dataGrid, List<double> M, List<double> alpha, string mody = "")
+        private void FillMAlphaRow(DataGridView dataGrid, List<decimal> M, List<decimal> alpha, string mody = "")
         {
             for (int i = 0; i < M.Count; i++)
             {

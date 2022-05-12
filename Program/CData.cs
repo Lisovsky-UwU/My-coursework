@@ -19,24 +19,24 @@ namespace Coursework
         /// <summary>
         /// Точность измерений
         /// </summary>
-        public static double T;
+        public static decimal T;
 
         /// <summary>
         /// коэффициент экспоненциального сглаживания
         /// </summary>
-        public static double A;
+        public static decimal A;
 
         /// <summary>
         /// Данные из ткрытой таблицы
         /// </summary>
-        public static List<List<double>> Table;
+        public static List<List<decimal>> Table;
 
         /// <summary>
         /// Конструктор (вот уже удивительно, да?)
         /// </summary>
         static CData()
         {
-            Table = new List<List<double>>();
+            Table = new List<List<decimal>>();
             DecNumbToOutput = 6;
         }
 
@@ -45,10 +45,10 @@ namespace Coursework
         /// </summary>
         /// <param name="value">Число для округления</param>
         /// <returns>Округленное число</returns>
-        public static double Round(double value)
+        public static double Round(decimal value)
         {
-            double roundVal = Math.Round(value, DecNumbToOutput);
-            return (roundVal != 0 ? roundVal : value);
+            decimal roundVal = Math.Round(value, DecNumbToOutput);
+            return (double)(roundVal != 0 ? roundVal : (Math.Round(roundVal, 8) == 0 ? 0 : value));
         }
     }
 }
