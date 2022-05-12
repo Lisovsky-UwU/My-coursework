@@ -149,7 +149,7 @@ namespace Coursework
                     min = Math.Min(min, element);
                 }
                 double newValue = Math.Round(min + rnd.NextDouble() * (max - min), 4);
-                dTable.Rows[dTable.Rows.Count - 1][colIdex] = newValue;
+                dTable.Rows[dTable.Rows.Count - 1][colIdex + 1] = newValue;
                 CData.Table[CData.Table.Count - 1].Add(newValue);
             }
         }

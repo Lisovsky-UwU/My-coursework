@@ -68,7 +68,7 @@ namespace Coursework
             for (int row = 0; row < ValuesTable.Count; row++)
             {
                 double summSQ = 0;
-                for (int col = 1; col < ValuesTable[row].Count(); col++)
+                for (int col = 0; col < ValuesTable[row].Count(); col++)
                 {
                     try
                     {
@@ -97,7 +97,7 @@ namespace Coursework
             for (int row = 1; row < ValuesTable.Count; row++)
             {
                 double summProd = 0;
-                for (int col = 1; col < ValuesTable[row].Count; col++)
+                for (int col = 0; col < ValuesTable[row].Count; col++)
                 {
                     try
                     {

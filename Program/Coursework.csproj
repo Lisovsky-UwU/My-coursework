@@ -87,12 +87,6 @@
     <Compile Include="FormChart.Designer.cs">
       <DependentUpon>FormChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTemplateLvlCalc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTemplateLvlCalc.Designer.cs">
-      <DependentUpon>FormTemplateLvlCalc.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pont.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,9 +97,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChart.resx">
       <DependentUpon>FormChart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTemplateLvlCalc.resx">
-      <DependentUpon>FormTemplateLvlCalc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

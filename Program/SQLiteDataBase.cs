@@ -240,7 +240,7 @@ namespace Coursework
             for (int i = 0; i < dTable.Rows.Count; i++)
             {
                 CData.Table.Add(new List<double>());
-                for (int j = 0; j < dTable.Columns.Count; j++)
+                for (int j = 1; j < dTable.Columns.Count; j++)
                 {
                     CData.Table[i].Add(Convert.ToDouble(dTable.Rows[i].ItemArray[j]));
                 }
