@@ -59,7 +59,7 @@ namespace Coursework
         /// Записать новое значение для T в БД
         /// </summary>
         /// <param name="newT">Новое значение для T</param>
-        public static void WriteT(double newT)
+        public static void WriteT(decimal newT)
         {
             dataBase.UpdateValue("Дополнительные данные", "T", newT);
             CData.T = newT;
@@ -69,7 +69,7 @@ namespace Coursework
         /// Записать новое значение для A в БД
         /// </summary>
         /// <param name="newA">Новое значение для A</param>
-        public static void WriteA(double newA)
+        public static void WriteA(decimal newA)
         {
             dataBase.UpdateValue("Дополнительные данные", "A", newA);
             CData.A = newA;
@@ -133,22 +133,22 @@ namespace Coursework
         /// </summary>
         public static void AddRow()
         {
-            CData.Table.Add(new List<double>());
+            CData.Table.Add(new List<decimal>());
             dTable.Rows.Add();
             dTable.Rows[dTable.Rows.Count - 1]["Эпоха"] = dTable.Rows.Count - 1;
             
             Random rnd = new Random();
             for (int colIdex = 0; colIdex < CData.Table[CData.Table.Count - 2].Count; colIdex++)
             {
-                double max = CData.Table[0][colIdex];
-                double min = CData.Table[0][colIdex];
+                decimal max = CData.Table[0][colIdex];
+                decimal min = CData.Table[0][colIdex];
                 for (int rowIndex = 1; rowIndex < CData.Table.Count() - 2; rowIndex++)
                 {
-                    double element = CData.Table[rowIndex][colIdex];
+                    decimal element = CData.Table[rowIndex][colIdex];
                     max = Math.Max(max, element);
                     min = Math.Min(min, element);
                 }
-                double newValue = Math.Round(min + rnd.NextDouble() * (max - min), 4);
+                decimal newValue = Math.Round(min + (decimal)rnd.NextDouble() * (max - min), 4);
                 dTable.Rows[dTable.Rows.Count - 1][colIdex + 1] = newValue;
                 CData.Table[CData.Table.Count - 1].Add(newValue);
             }

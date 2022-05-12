@@ -128,7 +128,7 @@ namespace Coursework
             TextBox tb = (sender as TextBox);
             if (tb.Text != "" && tb.Text[tb.Text.Length - 1] != ',' && tb.Text[tb.Text.Length - 1] != '0')
             {
-                CRequest.WriteT(Convert.ToDouble(tb.Text));
+                CRequest.WriteT(Convert.ToDecimal(tb.Text));
             }
         }
 
@@ -138,7 +138,7 @@ namespace Coursework
             TextBox tb = (sender as TextBox);
             if (tb.Text != "" && tb.Text[tb.Text.Length - 1] != ',' && tb.Text[tb.Text.Length - 1] != '0')
             {
-                CRequest.WriteA(Convert.ToDouble(tb.Text));
+                CRequest.WriteA(Convert.ToDecimal(tb.Text));
             }
         }
 
@@ -319,10 +319,10 @@ namespace Coursework
 
             for (int i = 0; i < Lvl2BlocksCount; i++)
             {
-                List<List<double>> newTable = new List<List<double>>();
+                List<List<decimal>> newTable = new List<List<decimal>>();
                 for (int j = 0; j < CData.Table.Count; j++)
                 {
-                    newTable.Add(new List<double>());
+                    newTable.Add(new List<decimal>());
                     for (int k = 0; k < Lvl2PointsStorage[i].Count; k++)
                     {
                         newTable[j].Add(CData.Table[j][Lvl2PointsStorage[i][k]]);
