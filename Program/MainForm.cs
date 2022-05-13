@@ -355,16 +355,27 @@ namespace Coursework
         // Кнопка подсчета 2 уровня
         private void buttonLvl2Calc_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i < Lvl2BlocksCount; i++)
+            for (int i = 0; i < Lvl2BlocksCount; i++)
             {
                 if (Lvl2PointsStorage[i].Count != Lvl2PointsStorage[0].Count)
                 {
                     MessageBox.Show("Распределите равное количество точек!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (Lvl2PointsStorage[i].Count == 0)
+                {
+                    MessageBox.Show("Во всех блоках должна быть хотя бы одна точка!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
-            Lvl2Data = new CDecompLvl2(Lvl2PointsStorage);
+            List<List<int>> newPointsStorage = new List<List<int>>();
+            for (int i = 0; i < Lvl2BlocksCount; i++)
+            {
+                newPointsStorage.Add(Lvl2PointsStorage[i]);
+            }
+
+            Lvl2Data = new CDecompLvl2(newPointsStorage.ToArray());
 
             comboBoxLvl2SelectedBlock.Enabled = true;
             comboBoxLvl2SelectedBlock.SelectedIndex = 0;
@@ -392,6 +403,80 @@ namespace Coursework
         private void comboBoxLvl2SelectedBlock_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedViewBlockChanged(comboBoxLvl2SelectedBlock.SelectedIndex);
+        }
+
+
+        /*                 Функционал для вкладки 4 уровня декомпозиции                 */
+
+        CDecompLvl2[] Lvl4Data;                 //Данные просчетов 4 уровня (на основе алгоритмов 2 уровня)
+        List<List<int>> Lvl4PointsStorage;      //Сортировка точек по блокам для 4 уровня
+
+        // Кнопка просчета 4 уровня
+        private void buttonLvl4Calculate_Click(object sender, EventArgs e)
+        {
+            comboBoxLvl4SelectedBlock.Items.Clear();
+            Lvl4PointsStorage = new List<List<int>>();
+            for (int i = 0; i < Lvl2PointsStorage.Length; i++)
+            {
+                if (Lvl2PointsStorage[i].Count != 0)
+                {
+                    Lvl4PointsStorage.Add(Lvl2PointsStorage[i]);
+                }
+            }
+            Lvl4Data = new CDecompLvl2[Lvl4PointsStorage.Count];
+            for (int i = 0; i < Lvl4PointsStorage.Count; i++)
+            {
+                if (i == Lvl4PointsStorage.Count - 1 && Lvl4PointsStorage[i].Count == 0)
+                {
+                    break;
+                }
+                comboBoxLvl4SelectedBlock.Items.Add($"Блок {i + 1}");
+
+                List<int>[] point = new List<int>[Lvl4PointsStorage[i].Count];
+                for (int j = 0; j < Lvl4PointsStorage[i].Count; j++)
+                {
+                    point[j] = new List<int> { Lvl4PointsStorage[i][j] };
+                }
+                Lvl4Data[i] = new CDecompLvl2(point);
+            }
+            if (Lvl4PointsStorage.Count == Lvl2PointsStorage.Length)
+            {
+                comboBoxLvl4SelectedBlock.Items[comboBoxLvl4SelectedBlock.Items.Count - 1] = "Нераспределенные точки";
+            }
+            comboBoxLvl4SelectedBlock.SelectedIndex = -1;
+            comboBoxLvl4SelectedBlock.SelectedIndex = 0;
+            
+            chartLvl4AllPoints.Enabled = true;
+        }
+
+        // Изменение выбранного блока точек
+        private void comboBoxLvl4SelectedBlock_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxLvl4SelectedPoint.Items.Clear();
+            int index = comboBoxLvl4SelectedBlock.SelectedIndex;
+            for (int i = 0; i < Lvl4PointsStorage[index].Count; i++)
+            {
+                comboBoxLvl4SelectedPoint.Items.Add(Lvl4PointsStorage[index][i]);
+            }
+            comboBoxLvl4SelectedPoint.SelectedIndex = -1;
+            comboBoxLvl4SelectedPoint.SelectedIndex = 0;
+
+            Lvl4Data[index].FillChart(chartLvl4AllPoints, "Точка");
+
+            foreach (Series s in chartLvl4AllPoints.Series)
+            {
+                s.BorderWidth = 2;
+                s.Label = "#INDEX";
+                s.MarkerStyle = MarkerStyle.Circle;
+                s.MarkerSize = 9;
+            }
+        }
+
+        // Изменение выбранной точки
+        private void comboBoxLvl4SelectedPoint_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBoxLvl4SelectedBlock.SelectedIndex;
+            Lvl4Data[index][comboBoxLvl4SelectedPoint.SelectedIndex].CalculateAndFillAccident(dataGridViewLvl4Accident);
         }
     }
 }
