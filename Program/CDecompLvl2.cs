@@ -28,7 +28,7 @@ namespace Coursework
         {
             this.PointsStorage = PointsStorage;
             BlocksCount = PointsStorage.Length - 1;
-            Data = new CDecompLvl1[BlocksCount];
+            Data = new CDecompLvl1[PointsStorage.Length];
             CalculateAllBlocks();
         }
 
@@ -37,7 +37,7 @@ namespace Coursework
         /// </summary>
         private void CalculateAllBlocks()
         {
-            for (int i = 0; i < BlocksCount; i++)
+            for (int i = 0; i < PointsStorage.Length; i++)
             {
                 List<List<decimal>> newTable = new List<List<decimal>>();
                 for (int j = 0; j < CData.Table.Count; j++)
@@ -56,14 +56,13 @@ namespace Coursework
         /// Заполнить общий график всех блоков
         /// </summary>
         /// <param name="chart">График для заполнения</param>
-        public void FillChart(Chart chart)
+        public void FillChart(Chart chart, string caption = "Блок")
         {
             chart.Series.Clear();
-            chart.ChartAreas.Clear();
-            chart.ChartAreas.Add(CData.GetDefaultChartArea("t", "M"));
-            for (int i = 0; i < BlocksCount; i++)
+            chart.ChartAreas[0].RecalculateAxesScale();
+            for (int i = 0; i < PointsStorage.Length; i++)
             {
-                chart.Series.Add(CData.GetSeries($"Блок {i + 1}", Data[i].M.M));
+                chart.Series.Add(CData.GetSeries($"{caption} {i + 1}", Data[i].M.M));
             }
         }
 

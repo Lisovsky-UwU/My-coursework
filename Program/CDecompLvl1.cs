@@ -35,8 +35,7 @@ namespace Coursework
         public void FillChartAllM(Chart chart)
         {
             chart.Series.Clear();
-            chart.ChartAreas.Clear();
-            chart.ChartAreas.Add(CData.GetDefaultChartArea("M", "alpha"));
+            chart.ChartAreas[0].RecalculateAxesScale();
             chart.Series.Add(CData.GetSeries("M", M.M, M.Alpha));
             chart.Series.Add(CData.GetSeries("M+", MPlus.M, MPlus.Alpha));
             chart.Series.Add(CData.GetSeries("M-", MMinus.M, MMinus.Alpha));
@@ -52,8 +51,7 @@ namespace Coursework
         public void FillChartPhase(Chart chart)
         {
             chart.Series.Clear();
-            chart.ChartAreas.Clear();
-            chart.ChartAreas.Add(CData.GetDefaultChartArea("t", "M"));
+            chart.ChartAreas[0].RecalculateAxesScale();
             chart.Series.Add(CData.GetSeries("M", M.M));
             chart.Series.Add(CData.GetSeries("M+", MPlus.M));
             chart.Series.Add(CData.GetSeries("M-", MMinus.M));
@@ -139,8 +137,8 @@ namespace Coursework
         // Функция для заполнения строки для таблицы аварийности
         private void ChangeDataRow(DataGridViewRow row, string number, decimal Mm, decimal M, decimal Mp, decimal Mzero)
         {
-            decimal R = DecimalMath.Abs((Mp - Mm) / 2);
-            decimal L = DecimalMath.Abs(M - Mzero);
+            decimal R = Math.Round(DecimalMath.Abs((Mp - Mm) / 2), 8);
+            decimal L = Math.Round(DecimalMath.Abs(M - Mzero), 8);
             row.Cells["Эпоха"].Value = number;
             row.Cells["R"].Value = CData.Round(R);
             row.Cells["L"].Value = CData.Round(L);

@@ -84,37 +84,5 @@ namespace Coursework
             }
             return newSer;
         }
-
-        /// <summary>
-        /// Получить область для построения графика с настройками поумолчанию
-        /// </summary>
-        /// <param name="nameX">Подпись для оси X</param>
-        /// <param name="nameY">Подпись для оси Y</param>
-        /// <returns>Вернет готовую ChartArea</returns>
-        public static ChartArea GetDefaultChartArea(string nameX, string nameY)
-        {
-            ChartArea chartArea = new ChartArea();
-            chartArea.AxisX = GetAxis(nameX);
-            chartArea.AxisY = GetAxis(nameY);
-            return chartArea;
-        }
-
-        /// <summary>
-        /// Получить готовую ось с настройками поумолчанию
-        /// </summary>
-        /// <param name="name">Подпись оси</param>
-        /// <returns>Вернет готовую ось</returns>
-        private static Axis GetAxis(string name)
-        {
-            Axis axis = new Axis();
-            axis.IsStartedFromZero = false;
-            axis.LabelStyle.Enabled = false;
-            axis.ArrowStyle = AxisArrowStyle.Triangle;
-            axis.MajorGrid.Enabled = false;
-            axis.MajorTickMark.Enabled = false;
-            axis.Title = name;
-            axis.TitleAlignment = System.Drawing.StringAlignment.Far;
-            return axis;
-        }
     }
 }

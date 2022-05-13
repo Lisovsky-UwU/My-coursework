@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartVis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelSettings = new System.Windows.Forms.Panel();
-            this.groupBoxSeriesVisible = new System.Windows.Forms.GroupBox();
+            this.checkedListBoxSeries = new System.Windows.Forms.CheckedListBox();
             this.groupBoxSeriesStyle = new System.Windows.Forms.GroupBox();
             this.comboBoxLinesType = new System.Windows.Forms.ComboBox();
             this.checkBoxTags = new System.Windows.Forms.CheckBox();
@@ -55,37 +55,37 @@
             // 
             // chartVis
             // 
-            chartArea2.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea2.AxisX.MajorTickMark.Enabled = false;
-            chartArea2.AxisX.Title = "<Имя оси X>";
-            chartArea2.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea2.AxisY.IsStartedFromZero = false;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea2.AxisY.MajorTickMark.Enabled = false;
-            chartArea2.AxisY.Title = "<Имя оси Y>";
-            chartArea2.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.Name = "ChartArea1";
-            this.chartVis.ChartAreas.Add(chartArea2);
+            chartArea1.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea1.AxisX.MajorTickMark.Enabled = false;
+            chartArea1.AxisX.Title = "<Имя оси X>";
+            chartArea1.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea1.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea1.AxisY.IsStartedFromZero = false;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea1.AxisY.MajorTickMark.Enabled = false;
+            chartArea1.AxisY.Title = "<Имя оси Y>";
+            chartArea1.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea1.Name = "ChartArea1";
+            this.chartVis.ChartAreas.Add(chartArea1);
             this.chartVis.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            this.chartVis.Legends.Add(legend2);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend1";
+            this.chartVis.Legends.Add(legend1);
             this.chartVis.Location = new System.Drawing.Point(0, 0);
             this.chartVis.Name = "chartVis";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartVis.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartVis.Series.Add(series1);
             this.chartVis.Size = new System.Drawing.Size(524, 476);
             this.chartVis.TabIndex = 0;
             this.chartVis.Text = "chartVis";
             // 
             // panelSettings
             // 
-            this.panelSettings.Controls.Add(this.groupBoxSeriesVisible);
+            this.panelSettings.Controls.Add(this.checkedListBoxSeries);
             this.panelSettings.Controls.Add(this.groupBoxSeriesStyle);
             this.panelSettings.Controls.Add(this.groupBoxAxesSettings);
             this.panelSettings.Dock = System.Windows.Forms.DockStyle.Right;
@@ -94,14 +94,17 @@
             this.panelSettings.Size = new System.Drawing.Size(140, 476);
             this.panelSettings.TabIndex = 2;
             // 
-            // groupBoxSeriesVisible
+            // checkedListBoxSeries
             // 
-            this.groupBoxSeriesVisible.Location = new System.Drawing.Point(5, 303);
-            this.groupBoxSeriesVisible.Name = "groupBoxSeriesVisible";
-            this.groupBoxSeriesVisible.Size = new System.Drawing.Size(128, 170);
-            this.groupBoxSeriesVisible.TabIndex = 10;
-            this.groupBoxSeriesVisible.TabStop = false;
-            this.groupBoxSeriesVisible.Text = "Графики";
+            this.checkedListBoxSeries.BackColor = System.Drawing.SystemColors.Control;
+            this.checkedListBoxSeries.CheckOnClick = true;
+            this.checkedListBoxSeries.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBoxSeries.FormattingEnabled = true;
+            this.checkedListBoxSeries.Location = new System.Drawing.Point(0, 283);
+            this.checkedListBoxSeries.Name = "checkedListBoxSeries";
+            this.checkedListBoxSeries.Size = new System.Drawing.Size(140, 193);
+            this.checkedListBoxSeries.TabIndex = 11;
+            this.checkedListBoxSeries.MouseUp += new System.Windows.Forms.MouseEventHandler(this.checkedListBoxSeries_MouseDown);
             // 
             // groupBoxSeriesStyle
             // 
@@ -113,9 +116,10 @@
             this.groupBoxSeriesStyle.Controls.Add(this.radioButtonTagCaptionNumber);
             this.groupBoxSeriesStyle.Controls.Add(this.label1);
             this.groupBoxSeriesStyle.Controls.Add(this.radioButtonTagCaptionValue);
-            this.groupBoxSeriesStyle.Location = new System.Drawing.Point(5, 87);
+            this.groupBoxSeriesStyle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxSeriesStyle.Location = new System.Drawing.Point(0, 73);
             this.groupBoxSeriesStyle.Name = "groupBoxSeriesStyle";
-            this.groupBoxSeriesStyle.Size = new System.Drawing.Size(128, 210);
+            this.groupBoxSeriesStyle.Size = new System.Drawing.Size(140, 210);
             this.groupBoxSeriesStyle.TabIndex = 9;
             this.groupBoxSeriesStyle.TabStop = false;
             this.groupBoxSeriesStyle.Text = "Вид графиков";
@@ -224,9 +228,10 @@
             // 
             this.groupBoxAxesSettings.Controls.Add(this.checkBoxCaptoin);
             this.groupBoxAxesSettings.Controls.Add(this.checkBoxGridVisible);
-            this.groupBoxAxesSettings.Location = new System.Drawing.Point(5, 8);
+            this.groupBoxAxesSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxAxesSettings.Location = new System.Drawing.Point(0, 0);
             this.groupBoxAxesSettings.Name = "groupBoxAxesSettings";
-            this.groupBoxAxesSettings.Size = new System.Drawing.Size(128, 73);
+            this.groupBoxAxesSettings.Size = new System.Drawing.Size(140, 73);
             this.groupBoxAxesSettings.TabIndex = 1;
             this.groupBoxAxesSettings.TabStop = false;
             this.groupBoxAxesSettings.Text = "Вид осей";
@@ -267,6 +272,7 @@
             this.MinimumSize = new System.Drawing.Size(400, 515);
             this.Name = "FormChart";
             this.Text = "FormChart";
+            this.Load += new System.EventHandler(this.FormChart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartVis)).EndInit();
             this.panelSettings.ResumeLayout(false);
             this.groupBoxSeriesStyle.ResumeLayout(false);
@@ -293,7 +299,7 @@
         private System.Windows.Forms.GroupBox groupBoxSeriesStyle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDownLineWidth;
-        private System.Windows.Forms.GroupBox groupBoxSeriesVisible;
         private System.Windows.Forms.ComboBox comboBoxLinesType;
+        private System.Windows.Forms.CheckedListBox checkedListBoxSeries;
     }
 }

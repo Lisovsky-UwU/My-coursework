@@ -43,18 +43,7 @@ namespace Coursework
                     chartVis.Series[s.Name].Font = new Font(chartVis.Series[s.Name].Font.Name, 10, Font.Style);
                     
                 }
-            }
-            int top = 19;
-            for (int i = 0; i < seriesCollection.Count; i++)
-            {
-                seriesCheckBox[i] = new CheckBox() { Parent = groupBoxSeriesVisible };
-                seriesCheckBox[i].Checked = true;
-                seriesCheckBox[i].Text = seriesCollection[i].Name;
-                seriesCheckBox[i].Tag = i;
-                seriesCheckBox[i].Left = 6;
-                seriesCheckBox[i].Top = top;
-                seriesCheckBox[i].CheckedChanged += checkBoxSeries_CheckedChanged;
-                top += 23;
+                checkedListBoxSeries.Items.Add(s.Name, true);
             }
         }
         
@@ -159,13 +148,6 @@ namespace Coursework
             });
         }
 
-        // Включить/выключить серию у графика
-        private void checkBoxSeries_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox cb = sender as CheckBox;
-            chartVis.Series[Convert.ToInt32(cb.Tag)].Enabled = cb.Checked;
-        }
-
         // Измненеие типа линий
         private void comboBoxLinesType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -182,6 +164,23 @@ namespace Coursework
             {
                 chartVis.Series[i].ChartType = newType;
             });
+        }
+
+        // Включение/выключение серии у графика
+        private void checkedListBoxSeries_MouseDown(object sender, MouseEventArgs e)
+        {
+            for (int i = 0; i < checkedListBoxSeries.Items.Count; i++)
+            {
+                chartVis.Series[i].Enabled = checkedListBoxSeries.GetItemChecked(i);
+            }
+            chartVis.ChartAreas[0].RecalculateAxesScale();
+        }
+
+        private void FormChart_Load(object sender, EventArgs e)
+        {
+            numericUpDownLineWidth.Value = 2;
+            checkBoxTags.Checked = true;
+            radioButtonTagCaptionNumber.Checked = true;
         }
     }
 }
