@@ -35,6 +35,8 @@ namespace Coursework
         private void MainForm_Load(object sender, EventArgs e)
         {
             numericUpDownDecNumb.Value = CData.DecNumbToOutput;
+            FormOpenDB frm = new FormOpenDB(this);
+            frm.Show();
         }
 
         // Открыть базу данных с помощью файлового диалога </summary>
@@ -50,7 +52,14 @@ namespace Coursework
                 {
                     CloseDB();
                 }
-                CRequest.OpenDB(fileDialog.FileName);
+                try
+                {
+                    CRequest.OpenDB(fileDialog.FileName);
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка открытия файла базы данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -79,40 +88,46 @@ namespace Coursework
             CRequest.CloseDB();
         }
 
+        // При открытии базы данных
+        public void OpenDB()
+        {
+            ToolStripSaveDB.Enabled = true;
+            ToolStripCloseDB.Enabled = true;
+            ToolStripUpdateImage.Enabled = true;
+
+            Image img = CRequest.IMG;
+            pictureBoxInData.Image = img;
+            pictureBoxLvl1.Image = img;
+            pictureBoxLvl2.Image = img;
+
+            textBoxT.Text = CData.T.ToString();
+            textBoxT.Enabled = true;
+            textBoxA.Text = CData.A.ToString();
+            textBoxA.Enabled = true;
+
+            comboBoxTable.Items.AddRange(CRequest.TableNames);
+            if (comboBoxTable.Items.Count != 0)
+            {
+                comboBoxTable.Enabled = true;
+                comboBoxTable.SelectedIndex = 0;
+                CRequest.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
+                buttonAddRow.Enabled = true;
+                buttonDeleteRows.Enabled = true;
+                buttonLvl1Calculate.Enabled = true;
+                buttonLvl2ApplyAllocation.Enabled = true;
+                ToolStripAddRow.Enabled = true;
+                numericUpDownLvl2NumbBlocks.Enabled = true;
+                numericUpDownDecNumb.Enabled = true;
+            }
+        }
+
         // Кнопка подключения базы данных
         private void buttonDBConnect_Click(object sender, EventArgs e)
         {
             OpenDataBaseWithFileDialog();            
             if (CRequest.DBIsOpen == true)
             {
-                ToolStripSaveDB.Enabled = true;
-                ToolStripCloseDB.Enabled = true;
-                ToolStripUpdateImage.Enabled = true;
-
-                Image img = CRequest.IMG;
-                pictureBoxInData.Image = img;
-                pictureBoxLvl1.Image = img;
-                pictureBoxLvl2.Image = img;
-
-                textBoxT.Text = CData.T.ToString();
-                textBoxT.Enabled = true;
-                textBoxA.Text = CData.A.ToString();
-                textBoxA.Enabled = true;
-                
-                comboBoxTable.Items.AddRange(CRequest.TableNames);
-                if (comboBoxTable.Items.Count != 0)
-                {
-                    comboBoxTable.Enabled = true;
-                    comboBoxTable.SelectedIndex = 0;
-                    CRequest.OpenAndShowTable(dataGridViewData, comboBoxTable.SelectedItem.ToString());
-                    buttonAddRow.Enabled = true;
-                    buttonDeleteRows.Enabled = true;
-                    buttonLvl1Calculate.Enabled = true;
-                    buttonLvl2ApplyAllocation.Enabled = true;
-                    ToolStripAddRow.Enabled = true;
-                    numericUpDownLvl2NumbBlocks.Enabled = true;
-                    numericUpDownDecNumb.Enabled = true;
-                }
+                OpenDB();
             }
         }
 
