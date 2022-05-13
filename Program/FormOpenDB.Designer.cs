@@ -91,6 +91,7 @@
             this.Controls.Add(this.buttonBrowseFile);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxFilePath);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormOpenDB";
