@@ -460,8 +460,9 @@ namespace Coursework
             }
             comboBoxLvl4SelectedBlock.SelectedIndex = -1;
             comboBoxLvl4SelectedBlock.SelectedIndex = 0;
-            
+
             chartLvl4AllPoints.Enabled = true;
+            chartLvl4OnePoint.Enabled = true;
         }
 
         // Изменение выбранного блока точек
@@ -477,21 +478,22 @@ namespace Coursework
             comboBoxLvl4SelectedPoint.SelectedIndex = 0;
 
             Lvl4Data[index].FillChart(chartLvl4AllPoints, "Точка");
-
-            foreach (Series s in chartLvl4AllPoints.Series)
-            {
-                s.BorderWidth = 2;
-                s.Label = "#INDEX";
-                s.MarkerStyle = MarkerStyle.Circle;
-                s.MarkerSize = 9;
-            }
         }
 
         // Изменение выбранной точки
         private void comboBoxLvl4SelectedPoint_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = comboBoxLvl4SelectedBlock.SelectedIndex;
-            Lvl4Data[index][comboBoxLvl4SelectedPoint.SelectedIndex].CalculateAndFillAccident(dataGridViewLvl4Accident);
+            Lvl4Data[index][comboBoxLvl4SelectedPoint.SelectedIndex].CalculateAndFillAccident(dataGridViewLvl4Accident, true);
+            Lvl4Data[index][comboBoxLvl4SelectedPoint.SelectedIndex].FillChartMAndForecast(chartLvl4OnePoint);
+
+            foreach (Series s in chartLvl4OnePoint.Series)
+            {
+                s.BorderWidth = 2;
+                s.Label = "#INDEX";
+                s.MarkerStyle = MarkerStyle.Circle;
+                s.MarkerSize = 9;
+            }
         }
     }
 }
