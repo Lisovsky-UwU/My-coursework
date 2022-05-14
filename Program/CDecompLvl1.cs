@@ -35,12 +35,12 @@ namespace Coursework
         public void FillChartAllM(Chart chart)
         {
             chart.Series.Clear();
-            chart.ChartAreas[0].RecalculateAxesScale();
             chart.Series.Add(CData.GetSeries("M", M.M, M.Alpha));
             chart.Series.Add(CData.GetSeries("M+", MPlus.M, MPlus.Alpha));
             chart.Series.Add(CData.GetSeries("M-", MMinus.M, MMinus.Alpha));
             chart.Series.Add(CData.GetSeries("M прогноз", M.MForecast, M.AlphaForecast));
             chart.Series.Add(CData.GetSeries("M+ прогноз", MPlus.MForecast, MPlus.AlphaForecast));
+            chart.ChartAreas[0].RecalculateAxesScale();
             chart.Series.Add(CData.GetSeries("M- прогноз", MMinus.MForecast, MMinus.AlphaForecast));
         }
 
@@ -51,29 +51,48 @@ namespace Coursework
         public void FillChartPhase(Chart chart)
         {
             chart.Series.Clear();
-            chart.ChartAreas[0].RecalculateAxesScale();
             chart.Series.Add(CData.GetSeries("M", M.M));
             chart.Series.Add(CData.GetSeries("M+", MPlus.M));
             chart.Series.Add(CData.GetSeries("M-", MMinus.M));
             chart.Series.Add(CData.GetSeries("M прогноз", M.MForecast));
+            chart.ChartAreas[0].RecalculateAxesScale();
+        }
+
+        /// <summary>
+        /// Заполнить график только с M и альфу
+        /// </summary>
+        /// <param name="chart"></param>
+        public void FillChartMAndForecast(Chart chart)
+        {
+            chart.Series.Clear();
+            chart.Series.Add(CData.GetSeries("M", M.M));
+            chart.Series.Add(CData.GetSeries("M прогноз", M.MForecast));
+            chart.ChartAreas[0].RecalculateAxesScale();
         }
 
         /// <summary>
         /// Посчитать и заполнить итоговую таблицу аварийности
         /// </summary>
         /// <param name="dataGrid">Таблица для заполнения</param>
-        public void CalculateAndFillAccident(DataGridView dataGrid)
+        public void CalculateAndFillAccident(DataGridView dataGrid, bool outM = false)
         {
             dataGrid.Rows.Clear();
-            FillColumns(dataGrid, "Эпоха", "R", "L", "Аварийность");
+            if (outM == true)
+            {
+                FillColumns(dataGrid, "Эпоха", "M", "R", "L", "Аварийность");
+            }
+            else
+            {
+                FillColumns(dataGrid, "Эпоха", "R", "L", "Аварийность");
+            }
 
             for (int i = 0; i < M.M.Count; i++)
             {
                 dataGrid.Rows.Add();
-                ChangeDataRow(dataGrid.Rows[i], i.ToString(), MMinus.M[i], M.M[i], MPlus.M[i], M.M[0]);
+                ChangeDataRow(dataGrid.Rows[i], i.ToString(), MMinus.M[i], M.M[i], MPlus.M[i], M.M[0], outM);
             }
             dataGrid.Rows.Add();
-            ChangeDataRow(dataGrid.Rows[dataGrid.Rows.Count - 1], "Прогноз", MMinus.MForecastValue, M.MForecastValue, MPlus.MForecastValue, M.M[0]);
+            ChangeDataRow(dataGrid.Rows[dataGrid.Rows.Count - 1], "Прогноз", MMinus.MForecastValue, M.MForecastValue, MPlus.MForecastValue, M.M[0], outM);
         }
        
         /// <summary>
@@ -135,12 +154,16 @@ namespace Coursework
         }
 
         // Функция для заполнения строки для таблицы аварийности
-        private void ChangeDataRow(DataGridViewRow row, string number, decimal Mm, decimal M, decimal Mp, decimal Mzero)
+        private void ChangeDataRow(DataGridViewRow row, string number, decimal Mm, decimal M, decimal Mp, decimal Mzero, bool outM)
         {
             decimal R = Math.Round(DecimalMath.Abs((Mp - Mm) / 2), 8);
             decimal L = Math.Round(DecimalMath.Abs(M - Mzero), 8);
             row.Cells["Эпоха"].Value = number;
             row.Cells["R"].Value = CData.Round(R);
+            if (outM == true)
+            {
+                row.Cells["M"].Value = M;
+            }
             row.Cells["L"].Value = CData.Round(L);
             row.Cells["Аварийность"].Value = L < R ? "Не аварийное" : (L > R ? "Аварийное" : "Предаварийное");
             switch (row.Cells["Аварийность"].Value.ToString())
