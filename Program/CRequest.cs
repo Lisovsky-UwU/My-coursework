@@ -134,15 +134,16 @@ namespace Coursework
         public static void AddRow()
         {
             CData.Table.Add(new List<decimal>());
+            CData.RowCount++;
             dTable.Rows.Add();
             dTable.Rows[dTable.Rows.Count - 1]["Эпоха"] = dTable.Rows.Count - 1;
             
             Random rnd = new Random();
-            for (int colIdex = 0; colIdex < CData.Table[CData.Table.Count - 2].Count; colIdex++)
+            for (int colIdex = 0; colIdex < CData.ColumnCount; colIdex++)
             {
                 decimal max = CData.Table[0][colIdex];
                 decimal min = CData.Table[0][colIdex];
-                for (int rowIndex = 1; rowIndex < CData.Table.Count() - 2; rowIndex++)
+                for (int rowIndex = 1; rowIndex < CData.RowCount - 2; rowIndex++)
                 {
                     decimal element = CData.Table[rowIndex][colIdex];
                     max = Math.Max(max, element);
@@ -185,6 +186,7 @@ namespace Coursework
                 {
                     dTable.Rows.RemoveAt(i);
                     CData.Table.RemoveAt(i);
+                    CData.RowCount--;
                 }
                 catch
                 {
