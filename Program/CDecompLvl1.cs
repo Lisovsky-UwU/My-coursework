@@ -162,7 +162,7 @@ namespace Coursework
             row.Cells["R"].Value = CData.Round(R);
             if (outM == true)
             {
-                row.Cells["M"].Value = M;
+                row.Cells["M"].Value = CData.Round(M);
             }
             row.Cells["L"].Value = CData.Round(L);
             row.Cells["Аварийность"].Value = L < R ? "Не аварийное" : (L > R ? "Аварийное" : "Предаварийное");

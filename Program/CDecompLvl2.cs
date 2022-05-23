@@ -39,16 +39,7 @@ namespace Coursework
         {
             for (int i = 0; i < PointsStorage.Length; i++)
             {
-                List<List<decimal>> newTable = new List<List<decimal>>();
-                for (int j = 0; j < CData.Table.Count; j++)
-                {
-                    newTable.Add(new List<decimal>());
-                    for (int k = 0; k < PointsStorage[i].Count; k++)
-                    {
-                        newTable[j].Add(CData.Table[j][PointsStorage[i][k] - 1]);
-                    }
-                }
-                Data[i] = new CDecompLvl1(newTable);
+                Data[i] = new CDecompLvl1(CData.GetTableForPoints(PointsStorage[i]));
             }
         }
 

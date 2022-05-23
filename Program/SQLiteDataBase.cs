@@ -245,6 +245,8 @@ namespace Coursework
                     CData.Table[i].Add(Convert.ToDecimal(dTable.Rows[i].ItemArray[j]));
                 }
             }
+            CData.ColumnCount = dTable.Columns.Count - 1;
+            CData.RowCount = dTable.Rows.Count;
         }
 
         /// <summary>
