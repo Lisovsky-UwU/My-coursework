@@ -46,6 +46,7 @@
             this.groupBoxAxesSettings = new System.Windows.Forms.GroupBox();
             this.checkBoxCaptoin = new System.Windows.Forms.CheckBox();
             this.checkBoxGridVisible = new System.Windows.Forms.CheckBox();
+            this.buttonFormHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartVis)).BeginInit();
             this.panelSettings.SuspendLayout();
             this.groupBoxSeriesStyle.SuspendLayout();
@@ -126,15 +127,16 @@
             // 
             // comboBoxLinesType
             // 
+            this.comboBoxLinesType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLinesType.FormattingEnabled = true;
             this.comboBoxLinesType.Items.AddRange(new object[] {
             "Плавная линия",
-            "Кривая линия"});
+            "Ломаная линия",
+            "Точки"});
             this.comboBoxLinesType.Location = new System.Drawing.Point(6, 19);
             this.comboBoxLinesType.Name = "comboBoxLinesType";
             this.comboBoxLinesType.Size = new System.Drawing.Size(116, 21);
             this.comboBoxLinesType.TabIndex = 11;
-            this.comboBoxLinesType.Text = "Плавная линия";
             this.comboBoxLinesType.SelectedIndexChanged += new System.EventHandler(this.comboBoxLinesType_SelectedIndexChanged);
             // 
             // checkBoxTags
@@ -226,6 +228,7 @@
             // 
             // groupBoxAxesSettings
             // 
+            this.groupBoxAxesSettings.Controls.Add(this.buttonFormHelp);
             this.groupBoxAxesSettings.Controls.Add(this.checkBoxCaptoin);
             this.groupBoxAxesSettings.Controls.Add(this.checkBoxGridVisible);
             this.groupBoxAxesSettings.Dock = System.Windows.Forms.DockStyle.Top;
@@ -261,6 +264,18 @@
             this.checkBoxGridVisible.Text = "Сетка";
             this.checkBoxGridVisible.UseVisualStyleBackColor = true;
             this.checkBoxGridVisible.CheckedChanged += new System.EventHandler(this.checkBoxGridVisible_CheckedChanged);
+            // 
+            // buttonFormHelp
+            // 
+            this.buttonFormHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonFormHelp.BackgroundImage = global::Coursework.Properties.Resources.help_butt;
+            this.buttonFormHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonFormHelp.Location = new System.Drawing.Point(103, 11);
+            this.buttonFormHelp.Name = "buttonFormHelp";
+            this.buttonFormHelp.Size = new System.Drawing.Size(31, 31);
+            this.buttonFormHelp.TabIndex = 9;
+            this.buttonFormHelp.UseVisualStyleBackColor = true;
+            this.buttonFormHelp.Click += new System.EventHandler(this.buttonFormHelp_Click);
             // 
             // FormChart
             // 
@@ -301,5 +316,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownLineWidth;
         private System.Windows.Forms.ComboBox comboBoxLinesType;
         private System.Windows.Forms.CheckedListBox checkedListBoxSeries;
+        private System.Windows.Forms.Button buttonFormHelp;
     }
 }

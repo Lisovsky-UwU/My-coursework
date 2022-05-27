@@ -63,6 +63,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap help_butt {
+            get {
+                object obj = ResourceManager.GetObject("help_butt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap No_image_available_svg {
             get {
                 object obj = ResourceManager.GetObject("No_image_available.svg", resourceCulture);

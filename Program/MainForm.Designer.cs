@@ -29,39 +29,39 @@ namespace Coursework
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea23 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend23 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea24 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend24 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea25 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend25 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea26 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend26 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea27 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend27 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea28 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend28 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea29 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend29 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea30 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend30 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea31 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend31 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea32 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend32 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea33 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend33 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -113,6 +113,8 @@ namespace Coursework
             this.buttonLvl2Calc = new System.Windows.Forms.Button();
             this.panelLvl2Allocation = new System.Windows.Forms.Panel();
             this.panelLvl2AllocationListsBox = new System.Windows.Forms.Panel();
+            this.buttonLvl2FromBlockToAll = new System.Windows.Forms.Button();
+            this.buttonLvl2FromAllToBlock = new System.Windows.Forms.Button();
             this.listBoxLvl2BlockPoints = new System.Windows.Forms.ListBox();
             this.listBoxLvl2AllPoints = new System.Windows.Forms.ListBox();
             this.panelLvl2AllocationControls = new System.Windows.Forms.Panel();
@@ -133,6 +135,8 @@ namespace Coursework
             this.buttonLvl3Calculate = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonLvl3FromBlockToAll = new System.Windows.Forms.Button();
+            this.buttonLvl3FromAllToBlock = new System.Windows.Forms.Button();
             this.listBoxLvl3SubBlockPoints = new System.Windows.Forms.ListBox();
             this.listBoxLvl3AllSubBlocksPoints = new System.Windows.Forms.ListBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -169,13 +173,10 @@ namespace Coursework
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxLvl4SelectedBlock = new System.Windows.Forms.ComboBox();
-            this.buttonLvl2FromAllToBlock = new System.Windows.Forms.Button();
-            this.buttonLvl2FromBlockToAll = new System.Windows.Forms.Button();
-            this.buttonLvl3FromBlockToAll = new System.Windows.Forms.Button();
-            this.buttonLvl3FromAllToBlock = new System.Windows.Forms.Button();
             this.pictureBoxInData = new System.Windows.Forms.PictureBox();
             this.pictureBoxLvl1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLvl2 = new System.Windows.Forms.PictureBox();
+            this.buttonFormHelp = new System.Windows.Forms.Button();
             this.toolStripDropDownFile = new System.Windows.Forms.ToolStripDropDownButton();
             this.ToolStripOpenDB = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSaveDB = new System.Windows.Forms.ToolStripMenuItem();
@@ -184,6 +185,7 @@ namespace Coursework
             this.toolStripDropDownData = new System.Windows.Forms.ToolStripDropDownButton();
             this.ToolStripUpdateImage = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddRow = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButtonFormHelp = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panelInstrument.SuspendLayout();
             this.tabControlNavigation.SuspendLayout();
@@ -301,7 +303,8 @@ namespace Coursework
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownFile,
-            this.toolStripDropDownData});
+            this.toolStripDropDownData,
+            this.toolStripButtonFormHelp});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(984, 25);
@@ -310,6 +313,7 @@ namespace Coursework
             // 
             // panelInstrument
             // 
+            this.panelInstrument.Controls.Add(this.buttonFormHelp);
             this.panelInstrument.Controls.Add(this.label1);
             this.panelInstrument.Controls.Add(this.label2);
             this.panelInstrument.Controls.Add(this.textBoxT);
@@ -468,35 +472,35 @@ namespace Coursework
             // 
             // chartLvl1AllM
             // 
-            chartArea1.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea1.AxisX.IsStartedFromZero = false;
-            chartArea1.AxisX.LabelStyle.Enabled = false;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisX.MajorTickMark.Enabled = false;
-            chartArea1.AxisX.Title = "M";
-            chartArea1.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea1.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea1.AxisY.IsStartedFromZero = false;
-            chartArea1.AxisY.LabelStyle.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorTickMark.Enabled = false;
-            chartArea1.AxisY.Title = "alpha";
-            chartArea1.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea1.Name = "ChartArea1";
-            this.chartLvl1AllM.ChartAreas.Add(chartArea1);
+            chartArea23.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea23.AxisX.IsStartedFromZero = false;
+            chartArea23.AxisX.LabelStyle.Enabled = false;
+            chartArea23.AxisX.MajorGrid.Enabled = false;
+            chartArea23.AxisX.MajorTickMark.Enabled = false;
+            chartArea23.AxisX.Title = "M";
+            chartArea23.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea23.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea23.AxisY.IsStartedFromZero = false;
+            chartArea23.AxisY.LabelStyle.Enabled = false;
+            chartArea23.AxisY.MajorGrid.Enabled = false;
+            chartArea23.AxisY.MajorTickMark.Enabled = false;
+            chartArea23.AxisY.Title = "alpha";
+            chartArea23.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea23.Name = "ChartArea1";
+            this.chartLvl1AllM.ChartAreas.Add(chartArea23);
             this.chartLvl1AllM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl1AllM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartLvl1AllM.Enabled = false;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Name = "Legend1";
-            this.chartLvl1AllM.Legends.Add(legend1);
+            legend23.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend23.Name = "Legend1";
+            this.chartLvl1AllM.Legends.Add(legend23);
             this.chartLvl1AllM.Location = new System.Drawing.Point(0, 204);
             this.chartLvl1AllM.Name = "chartLvl1AllM";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartLvl1AllM.Series.Add(series1);
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series23.Legend = "Legend1";
+            series23.Name = "Series1";
+            this.chartLvl1AllM.Series.Add(series23);
             this.chartLvl1AllM.Size = new System.Drawing.Size(281, 204);
             this.chartLvl1AllM.TabIndex = 6;
             this.chartLvl1AllM.Text = "2 уровень - фазовый график";
@@ -504,35 +508,35 @@ namespace Coursework
             // 
             // chartLvl1Phase
             // 
-            chartArea2.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea2.AxisX.IsStartedFromZero = false;
-            chartArea2.AxisX.LabelStyle.Enabled = false;
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisX.MajorTickMark.Enabled = false;
-            chartArea2.AxisX.Title = "t";
-            chartArea2.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea2.AxisY.IsStartedFromZero = false;
-            chartArea2.AxisY.LabelStyle.Enabled = false;
-            chartArea2.AxisY.MajorGrid.Enabled = false;
-            chartArea2.AxisY.MajorTickMark.Enabled = false;
-            chartArea2.AxisY.Title = "M";
-            chartArea2.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.Name = "ChartArea1";
-            this.chartLvl1Phase.ChartAreas.Add(chartArea2);
+            chartArea24.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea24.AxisX.IsStartedFromZero = false;
+            chartArea24.AxisX.LabelStyle.Enabled = false;
+            chartArea24.AxisX.MajorGrid.Enabled = false;
+            chartArea24.AxisX.MajorTickMark.Enabled = false;
+            chartArea24.AxisX.Title = "t";
+            chartArea24.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea24.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea24.AxisY.IsStartedFromZero = false;
+            chartArea24.AxisY.LabelStyle.Enabled = false;
+            chartArea24.AxisY.MajorGrid.Enabled = false;
+            chartArea24.AxisY.MajorTickMark.Enabled = false;
+            chartArea24.AxisY.Title = "M";
+            chartArea24.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea24.Name = "ChartArea1";
+            this.chartLvl1Phase.ChartAreas.Add(chartArea24);
             this.chartLvl1Phase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl1Phase.Dock = System.Windows.Forms.DockStyle.Top;
             this.chartLvl1Phase.Enabled = false;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            this.chartLvl1Phase.Legends.Add(legend2);
+            legend24.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend24.Name = "Legend1";
+            this.chartLvl1Phase.Legends.Add(legend24);
             this.chartLvl1Phase.Location = new System.Drawing.Point(0, 0);
             this.chartLvl1Phase.Name = "chartLvl1Phase";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartLvl1Phase.Series.Add(series2);
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series24.Legend = "Legend1";
+            series24.Name = "Series1";
+            this.chartLvl1Phase.Series.Add(series24);
             this.chartLvl1Phase.Size = new System.Drawing.Size(281, 204);
             this.chartLvl1Phase.TabIndex = 3;
             this.chartLvl1Phase.Text = "1 уровень - график отклика";
@@ -684,35 +688,35 @@ namespace Coursework
             // 
             // chartLvl2AllM
             // 
-            chartArea3.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea3.AxisX.IsStartedFromZero = false;
-            chartArea3.AxisX.LabelStyle.Enabled = false;
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisX.MajorTickMark.Enabled = false;
-            chartArea3.AxisX.Title = "M";
-            chartArea3.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea3.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea3.AxisY.IsStartedFromZero = false;
-            chartArea3.AxisY.LabelStyle.Enabled = false;
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.AxisY.MajorTickMark.Enabled = false;
-            chartArea3.AxisY.Title = "alpha";
-            chartArea3.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea3.Name = "ChartArea1";
-            this.chartLvl2AllM.ChartAreas.Add(chartArea3);
+            chartArea25.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea25.AxisX.IsStartedFromZero = false;
+            chartArea25.AxisX.LabelStyle.Enabled = false;
+            chartArea25.AxisX.MajorGrid.Enabled = false;
+            chartArea25.AxisX.MajorTickMark.Enabled = false;
+            chartArea25.AxisX.Title = "M";
+            chartArea25.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea25.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea25.AxisY.IsStartedFromZero = false;
+            chartArea25.AxisY.LabelStyle.Enabled = false;
+            chartArea25.AxisY.MajorGrid.Enabled = false;
+            chartArea25.AxisY.MajorTickMark.Enabled = false;
+            chartArea25.AxisY.Title = "alpha";
+            chartArea25.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea25.Name = "ChartArea1";
+            this.chartLvl2AllM.ChartAreas.Add(chartArea25);
             this.chartLvl2AllM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl2AllM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartLvl2AllM.Enabled = false;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend3.Name = "Legend1";
-            this.chartLvl2AllM.Legends.Add(legend3);
+            legend25.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend25.Name = "Legend1";
+            this.chartLvl2AllM.Legends.Add(legend25);
             this.chartLvl2AllM.Location = new System.Drawing.Point(0, 204);
             this.chartLvl2AllM.Name = "chartLvl2AllM";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartLvl2AllM.Series.Add(series3);
+            series25.ChartArea = "ChartArea1";
+            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series25.Legend = "Legend1";
+            series25.Name = "Series1";
+            this.chartLvl2AllM.Series.Add(series25);
             this.chartLvl2AllM.Size = new System.Drawing.Size(234, 210);
             this.chartLvl2AllM.TabIndex = 6;
             this.chartLvl2AllM.Text = "2 уровень - фазовый график";
@@ -720,35 +724,35 @@ namespace Coursework
             // 
             // chartLvl2Phase
             // 
-            chartArea4.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea4.AxisX.IsStartedFromZero = false;
-            chartArea4.AxisX.LabelStyle.Enabled = false;
-            chartArea4.AxisX.MajorGrid.Enabled = false;
-            chartArea4.AxisX.MajorTickMark.Enabled = false;
-            chartArea4.AxisX.Title = "t";
-            chartArea4.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea4.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea4.AxisY.IsStartedFromZero = false;
-            chartArea4.AxisY.LabelStyle.Enabled = false;
-            chartArea4.AxisY.MajorGrid.Enabled = false;
-            chartArea4.AxisY.MajorTickMark.Enabled = false;
-            chartArea4.AxisY.Title = "M";
-            chartArea4.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea4.Name = "ChartArea1";
-            this.chartLvl2Phase.ChartAreas.Add(chartArea4);
+            chartArea26.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea26.AxisX.IsStartedFromZero = false;
+            chartArea26.AxisX.LabelStyle.Enabled = false;
+            chartArea26.AxisX.MajorGrid.Enabled = false;
+            chartArea26.AxisX.MajorTickMark.Enabled = false;
+            chartArea26.AxisX.Title = "t";
+            chartArea26.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea26.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea26.AxisY.IsStartedFromZero = false;
+            chartArea26.AxisY.LabelStyle.Enabled = false;
+            chartArea26.AxisY.MajorGrid.Enabled = false;
+            chartArea26.AxisY.MajorTickMark.Enabled = false;
+            chartArea26.AxisY.Title = "M";
+            chartArea26.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea26.Name = "ChartArea1";
+            this.chartLvl2Phase.ChartAreas.Add(chartArea26);
             this.chartLvl2Phase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl2Phase.Dock = System.Windows.Forms.DockStyle.Top;
             this.chartLvl2Phase.Enabled = false;
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend4.Name = "Legend1";
-            this.chartLvl2Phase.Legends.Add(legend4);
+            legend26.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend26.Name = "Legend1";
+            this.chartLvl2Phase.Legends.Add(legend26);
             this.chartLvl2Phase.Location = new System.Drawing.Point(0, 0);
             this.chartLvl2Phase.Name = "chartLvl2Phase";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartLvl2Phase.Series.Add(series4);
+            series26.ChartArea = "ChartArea1";
+            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series26.Legend = "Legend1";
+            series26.Name = "Series1";
+            this.chartLvl2Phase.Series.Add(series26);
             this.chartLvl2Phase.Size = new System.Drawing.Size(234, 204);
             this.chartLvl2Phase.TabIndex = 3;
             this.chartLvl2Phase.Text = "2 уровень - график отклика";
@@ -860,34 +864,34 @@ namespace Coursework
             // 
             // chartLvl2AllBlocks
             // 
-            chartArea5.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea5.AxisX.IsStartedFromZero = false;
-            chartArea5.AxisX.LabelStyle.Enabled = false;
-            chartArea5.AxisX.MajorGrid.Enabled = false;
-            chartArea5.AxisX.MajorTickMark.Enabled = false;
-            chartArea5.AxisX.Title = "t";
-            chartArea5.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea5.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea5.AxisY.IsStartedFromZero = false;
-            chartArea5.AxisY.LabelStyle.Enabled = false;
-            chartArea5.AxisY.MajorGrid.Enabled = false;
-            chartArea5.AxisY.MajorTickMark.Enabled = false;
-            chartArea5.AxisY.Title = "M";
-            chartArea5.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea5.Name = "ChartArea1";
-            this.chartLvl2AllBlocks.ChartAreas.Add(chartArea5);
+            chartArea27.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea27.AxisX.IsStartedFromZero = false;
+            chartArea27.AxisX.LabelStyle.Enabled = false;
+            chartArea27.AxisX.MajorGrid.Enabled = false;
+            chartArea27.AxisX.MajorTickMark.Enabled = false;
+            chartArea27.AxisX.Title = "t";
+            chartArea27.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea27.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea27.AxisY.IsStartedFromZero = false;
+            chartArea27.AxisY.LabelStyle.Enabled = false;
+            chartArea27.AxisY.MajorGrid.Enabled = false;
+            chartArea27.AxisY.MajorTickMark.Enabled = false;
+            chartArea27.AxisY.Title = "M";
+            chartArea27.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea27.Name = "ChartArea1";
+            this.chartLvl2AllBlocks.ChartAreas.Add(chartArea27);
             this.chartLvl2AllBlocks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl2AllBlocks.Enabled = false;
-            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend5.Name = "Legend1";
-            this.chartLvl2AllBlocks.Legends.Add(legend5);
+            legend27.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend27.Name = "Legend1";
+            this.chartLvl2AllBlocks.Legends.Add(legend27);
             this.chartLvl2AllBlocks.Location = new System.Drawing.Point(6, 228);
             this.chartLvl2AllBlocks.Name = "chartLvl2AllBlocks";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartLvl2AllBlocks.Series.Add(series5);
+            series27.ChartArea = "ChartArea1";
+            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series27.Legend = "Legend1";
+            series27.Name = "Series1";
+            this.chartLvl2AllBlocks.Series.Add(series27);
             this.chartLvl2AllBlocks.Size = new System.Drawing.Size(209, 153);
             this.chartLvl2AllBlocks.TabIndex = 8;
             this.chartLvl2AllBlocks.Text = "2 уровень - график всех блоков";
@@ -907,6 +911,7 @@ namespace Coursework
             // 
             // comboBoxLvl2SelectedBlock
             // 
+            this.comboBoxLvl2SelectedBlock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLvl2SelectedBlock.Enabled = false;
             this.comboBoxLvl2SelectedBlock.FormattingEnabled = true;
             this.comboBoxLvl2SelectedBlock.Location = new System.Drawing.Point(110, 201);
@@ -956,6 +961,28 @@ namespace Coursework
             this.panelLvl2AllocationListsBox.Name = "panelLvl2AllocationListsBox";
             this.panelLvl2AllocationListsBox.Size = new System.Drawing.Size(234, 314);
             this.panelLvl2AllocationListsBox.TabIndex = 8;
+            // 
+            // buttonLvl2FromBlockToAll
+            // 
+            this.buttonLvl2FromBlockToAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLvl2FromBlockToAll.Location = new System.Drawing.Point(105, 155);
+            this.buttonLvl2FromBlockToAll.Name = "buttonLvl2FromBlockToAll";
+            this.buttonLvl2FromBlockToAll.Size = new System.Drawing.Size(23, 23);
+            this.buttonLvl2FromBlockToAll.TabIndex = 9;
+            this.buttonLvl2FromBlockToAll.Text = "<";
+            this.buttonLvl2FromBlockToAll.UseVisualStyleBackColor = true;
+            this.buttonLvl2FromBlockToAll.Click += new System.EventHandler(this.buttonLvl2Lb2ToLb1_Click);
+            // 
+            // buttonLvl2FromAllToBlock
+            // 
+            this.buttonLvl2FromAllToBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLvl2FromAllToBlock.Location = new System.Drawing.Point(105, 121);
+            this.buttonLvl2FromAllToBlock.Name = "buttonLvl2FromAllToBlock";
+            this.buttonLvl2FromAllToBlock.Size = new System.Drawing.Size(23, 23);
+            this.buttonLvl2FromAllToBlock.TabIndex = 8;
+            this.buttonLvl2FromAllToBlock.Text = ">";
+            this.buttonLvl2FromAllToBlock.UseVisualStyleBackColor = true;
+            this.buttonLvl2FromAllToBlock.Click += new System.EventHandler(this.buttonLvl2Lb1ToLb2_Click);
             // 
             // listBoxLvl2BlockPoints
             // 
@@ -1142,38 +1169,38 @@ namespace Coursework
             // 
             // chartLvl3BlocksLinks
             // 
-            chartArea6.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea6.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea6.AxisX.IsStartedFromZero = false;
-            chartArea6.AxisX.LabelStyle.Enabled = false;
-            chartArea6.AxisX.MajorGrid.Enabled = false;
-            chartArea6.AxisX.MajorTickMark.Enabled = false;
-            chartArea6.AxisX.Title = "t";
-            chartArea6.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea6.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea6.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea6.AxisY.IsStartedFromZero = false;
-            chartArea6.AxisY.LabelStyle.Enabled = false;
-            chartArea6.AxisY.MajorGrid.Enabled = false;
-            chartArea6.AxisY.MajorTickMark.Enabled = false;
-            chartArea6.AxisY.Title = "M";
-            chartArea6.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea6.Name = "ChartArea1";
-            this.chartLvl3BlocksLinks.ChartAreas.Add(chartArea6);
+            chartArea28.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea28.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea28.AxisX.IsStartedFromZero = false;
+            chartArea28.AxisX.LabelStyle.Enabled = false;
+            chartArea28.AxisX.MajorGrid.Enabled = false;
+            chartArea28.AxisX.MajorTickMark.Enabled = false;
+            chartArea28.AxisX.Title = "t";
+            chartArea28.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea28.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea28.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea28.AxisY.IsStartedFromZero = false;
+            chartArea28.AxisY.LabelStyle.Enabled = false;
+            chartArea28.AxisY.MajorGrid.Enabled = false;
+            chartArea28.AxisY.MajorTickMark.Enabled = false;
+            chartArea28.AxisY.Title = "M";
+            chartArea28.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea28.Name = "ChartArea1";
+            this.chartLvl3BlocksLinks.ChartAreas.Add(chartArea28);
             this.chartLvl3BlocksLinks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl3BlocksLinks.Dock = System.Windows.Forms.DockStyle.Top;
             this.chartLvl3BlocksLinks.Enabled = false;
-            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend6.Enabled = false;
-            legend6.Name = "Legend1";
-            this.chartLvl3BlocksLinks.Legends.Add(legend6);
+            legend28.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend28.Enabled = false;
+            legend28.Name = "Legend1";
+            this.chartLvl3BlocksLinks.Legends.Add(legend28);
             this.chartLvl3BlocksLinks.Location = new System.Drawing.Point(0, 0);
             this.chartLvl3BlocksLinks.Name = "chartLvl3BlocksLinks";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartLvl3BlocksLinks.Series.Add(series6);
+            series28.ChartArea = "ChartArea1";
+            series28.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series28.Legend = "Legend1";
+            series28.Name = "Series1";
+            this.chartLvl3BlocksLinks.Series.Add(series28);
             this.chartLvl3BlocksLinks.Size = new System.Drawing.Size(274, 154);
             this.chartLvl3BlocksLinks.TabIndex = 21;
             this.chartLvl3BlocksLinks.Text = "3 уровень - связи точек";
@@ -1181,34 +1208,34 @@ namespace Coursework
             // 
             // chartLvl3AllSubBlocks
             // 
-            chartArea7.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea7.AxisX.IsStartedFromZero = false;
-            chartArea7.AxisX.LabelStyle.Enabled = false;
-            chartArea7.AxisX.MajorGrid.Enabled = false;
-            chartArea7.AxisX.MajorTickMark.Enabled = false;
-            chartArea7.AxisX.Title = "t";
-            chartArea7.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea7.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea7.AxisY.IsStartedFromZero = false;
-            chartArea7.AxisY.LabelStyle.Enabled = false;
-            chartArea7.AxisY.MajorGrid.Enabled = false;
-            chartArea7.AxisY.MajorTickMark.Enabled = false;
-            chartArea7.AxisY.Title = "M";
-            chartArea7.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea7.Name = "ChartArea1";
-            this.chartLvl3AllSubBlocks.ChartAreas.Add(chartArea7);
+            chartArea29.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea29.AxisX.IsStartedFromZero = false;
+            chartArea29.AxisX.LabelStyle.Enabled = false;
+            chartArea29.AxisX.MajorGrid.Enabled = false;
+            chartArea29.AxisX.MajorTickMark.Enabled = false;
+            chartArea29.AxisX.Title = "t";
+            chartArea29.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea29.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea29.AxisY.IsStartedFromZero = false;
+            chartArea29.AxisY.LabelStyle.Enabled = false;
+            chartArea29.AxisY.MajorGrid.Enabled = false;
+            chartArea29.AxisY.MajorTickMark.Enabled = false;
+            chartArea29.AxisY.Title = "M";
+            chartArea29.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea29.Name = "ChartArea1";
+            this.chartLvl3AllSubBlocks.ChartAreas.Add(chartArea29);
             this.chartLvl3AllSubBlocks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl3AllSubBlocks.Enabled = false;
-            legend7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend7.Name = "Legend1";
-            this.chartLvl3AllSubBlocks.Legends.Add(legend7);
+            legend29.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend29.Name = "Legend1";
+            this.chartLvl3AllSubBlocks.Legends.Add(legend29);
             this.chartLvl3AllSubBlocks.Location = new System.Drawing.Point(3, 194);
             this.chartLvl3AllSubBlocks.Name = "chartLvl3AllSubBlocks";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartLvl3AllSubBlocks.Series.Add(series7);
+            series29.ChartArea = "ChartArea1";
+            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series29.Legend = "Legend1";
+            series29.Name = "Series1";
+            this.chartLvl3AllSubBlocks.Series.Add(series29);
             this.chartLvl3AllSubBlocks.Size = new System.Drawing.Size(268, 185);
             this.chartLvl3AllSubBlocks.TabIndex = 20;
             this.chartLvl3AllSubBlocks.Text = "3 уровень - график всех подблоков";
@@ -1246,6 +1273,30 @@ namespace Coursework
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(184, 267);
             this.panel1.TabIndex = 11;
+            // 
+            // buttonLvl3FromBlockToAll
+            // 
+            this.buttonLvl3FromBlockToAll.Enabled = false;
+            this.buttonLvl3FromBlockToAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLvl3FromBlockToAll.Location = new System.Drawing.Point(76, 137);
+            this.buttonLvl3FromBlockToAll.Name = "buttonLvl3FromBlockToAll";
+            this.buttonLvl3FromBlockToAll.Size = new System.Drawing.Size(23, 23);
+            this.buttonLvl3FromBlockToAll.TabIndex = 11;
+            this.buttonLvl3FromBlockToAll.Text = "<";
+            this.buttonLvl3FromBlockToAll.UseVisualStyleBackColor = true;
+            this.buttonLvl3FromBlockToAll.Click += new System.EventHandler(this.buttonLvl3FromBlockToAll_Click);
+            // 
+            // buttonLvl3FromAllToBlock
+            // 
+            this.buttonLvl3FromAllToBlock.Enabled = false;
+            this.buttonLvl3FromAllToBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLvl3FromAllToBlock.Location = new System.Drawing.Point(76, 103);
+            this.buttonLvl3FromAllToBlock.Name = "buttonLvl3FromAllToBlock";
+            this.buttonLvl3FromAllToBlock.Size = new System.Drawing.Size(23, 23);
+            this.buttonLvl3FromAllToBlock.TabIndex = 10;
+            this.buttonLvl3FromAllToBlock.Text = ">";
+            this.buttonLvl3FromAllToBlock.UseVisualStyleBackColor = true;
+            this.buttonLvl3FromAllToBlock.Click += new System.EventHandler(this.buttonLvl3FromAllToBlock_Click);
             // 
             // listBoxLvl3SubBlockPoints
             // 
@@ -1393,70 +1444,70 @@ namespace Coursework
             // 
             // chartLvl3AllM
             // 
-            chartArea8.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea8.AxisX.IsStartedFromZero = false;
-            chartArea8.AxisX.LabelStyle.Enabled = false;
-            chartArea8.AxisX.MajorGrid.Enabled = false;
-            chartArea8.AxisX.MajorTickMark.Enabled = false;
-            chartArea8.AxisX.Title = "M";
-            chartArea8.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea8.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea8.AxisY.IsStartedFromZero = false;
-            chartArea8.AxisY.LabelStyle.Enabled = false;
-            chartArea8.AxisY.MajorGrid.Enabled = false;
-            chartArea8.AxisY.MajorTickMark.Enabled = false;
-            chartArea8.AxisY.Title = "alpha";
-            chartArea8.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea8.Name = "ChartArea1";
-            this.chartLvl3AllM.ChartAreas.Add(chartArea8);
+            chartArea30.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea30.AxisX.IsStartedFromZero = false;
+            chartArea30.AxisX.LabelStyle.Enabled = false;
+            chartArea30.AxisX.MajorGrid.Enabled = false;
+            chartArea30.AxisX.MajorTickMark.Enabled = false;
+            chartArea30.AxisX.Title = "M";
+            chartArea30.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea30.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea30.AxisY.IsStartedFromZero = false;
+            chartArea30.AxisY.LabelStyle.Enabled = false;
+            chartArea30.AxisY.MajorGrid.Enabled = false;
+            chartArea30.AxisY.MajorTickMark.Enabled = false;
+            chartArea30.AxisY.Title = "alpha";
+            chartArea30.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea30.Name = "ChartArea1";
+            this.chartLvl3AllM.ChartAreas.Add(chartArea30);
             this.chartLvl3AllM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl3AllM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartLvl3AllM.Enabled = false;
-            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend8.Name = "Legend1";
-            this.chartLvl3AllM.Legends.Add(legend8);
+            legend30.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend30.Name = "Legend1";
+            this.chartLvl3AllM.Legends.Add(legend30);
             this.chartLvl3AllM.Location = new System.Drawing.Point(0, 181);
             this.chartLvl3AllM.Name = "chartLvl3AllM";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartLvl3AllM.Series.Add(series8);
+            series30.ChartArea = "ChartArea1";
+            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series30.Legend = "Legend1";
+            series30.Name = "Series1";
+            this.chartLvl3AllM.Series.Add(series30);
             this.chartLvl3AllM.Size = new System.Drawing.Size(491, 201);
             this.chartLvl3AllM.TabIndex = 19;
             this.chartLvl3AllM.Text = "3 уровень - фазовый график";
             // 
             // chartLvl3Phase
             // 
-            chartArea9.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea9.AxisX.IsStartedFromZero = false;
-            chartArea9.AxisX.LabelStyle.Enabled = false;
-            chartArea9.AxisX.MajorGrid.Enabled = false;
-            chartArea9.AxisX.MajorTickMark.Enabled = false;
-            chartArea9.AxisX.Title = "t";
-            chartArea9.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea9.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea9.AxisY.IsStartedFromZero = false;
-            chartArea9.AxisY.LabelStyle.Enabled = false;
-            chartArea9.AxisY.MajorGrid.Enabled = false;
-            chartArea9.AxisY.MajorTickMark.Enabled = false;
-            chartArea9.AxisY.Title = "M";
-            chartArea9.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea9.Name = "ChartArea1";
-            this.chartLvl3Phase.ChartAreas.Add(chartArea9);
+            chartArea31.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea31.AxisX.IsStartedFromZero = false;
+            chartArea31.AxisX.LabelStyle.Enabled = false;
+            chartArea31.AxisX.MajorGrid.Enabled = false;
+            chartArea31.AxisX.MajorTickMark.Enabled = false;
+            chartArea31.AxisX.Title = "t";
+            chartArea31.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea31.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea31.AxisY.IsStartedFromZero = false;
+            chartArea31.AxisY.LabelStyle.Enabled = false;
+            chartArea31.AxisY.MajorGrid.Enabled = false;
+            chartArea31.AxisY.MajorTickMark.Enabled = false;
+            chartArea31.AxisY.Title = "M";
+            chartArea31.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea31.Name = "ChartArea1";
+            this.chartLvl3Phase.ChartAreas.Add(chartArea31);
             this.chartLvl3Phase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl3Phase.Dock = System.Windows.Forms.DockStyle.Top;
             this.chartLvl3Phase.Enabled = false;
-            legend9.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend9.Name = "Legend1";
-            this.chartLvl3Phase.Legends.Add(legend9);
+            legend31.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend31.Name = "Legend1";
+            this.chartLvl3Phase.Legends.Add(legend31);
             this.chartLvl3Phase.Location = new System.Drawing.Point(0, 0);
             this.chartLvl3Phase.Name = "chartLvl3Phase";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chartLvl3Phase.Series.Add(series9);
+            series31.ChartArea = "ChartArea1";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series31.Legend = "Legend1";
+            series31.Name = "Series1";
+            this.chartLvl3Phase.Series.Add(series31);
             this.chartLvl3Phase.Size = new System.Drawing.Size(491, 181);
             this.chartLvl3Phase.TabIndex = 17;
             this.chartLvl3Phase.Text = "3 уровень - график отклика";
@@ -1603,37 +1654,37 @@ namespace Coursework
             // 
             // chartLvl4OnePoint
             // 
-            chartArea10.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea10.AxisX.IsStartedFromZero = false;
-            chartArea10.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea10.AxisX.MajorTickMark.Enabled = false;
-            chartArea10.AxisX.Title = "t";
-            chartArea10.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea10.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea10.AxisY.IsStartedFromZero = false;
-            chartArea10.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea10.AxisY.MajorTickMark.Enabled = false;
-            chartArea10.AxisY.Title = "M";
-            chartArea10.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea10.Name = "ChartArea1";
-            this.chartLvl4OnePoint.ChartAreas.Add(chartArea10);
+            chartArea32.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea32.AxisX.IsStartedFromZero = false;
+            chartArea32.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea32.AxisX.MajorTickMark.Enabled = false;
+            chartArea32.AxisX.Title = "t";
+            chartArea32.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea32.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea32.AxisY.IsStartedFromZero = false;
+            chartArea32.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea32.AxisY.MajorTickMark.Enabled = false;
+            chartArea32.AxisY.Title = "M";
+            chartArea32.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea32.Name = "ChartArea1";
+            this.chartLvl4OnePoint.ChartAreas.Add(chartArea32);
             this.chartLvl4OnePoint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl4OnePoint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartLvl4OnePoint.Enabled = false;
-            legend10.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend10.Name = "Legend1";
-            this.chartLvl4OnePoint.Legends.Add(legend10);
+            legend32.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend32.Name = "Legend1";
+            this.chartLvl4OnePoint.Legends.Add(legend32);
             this.chartLvl4OnePoint.Location = new System.Drawing.Point(327, 0);
             this.chartLvl4OnePoint.Name = "chartLvl4OnePoint";
-            series10.BorderWidth = 2;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.Label = "#INDEX";
-            series10.Legend = "Legend1";
-            series10.MarkerSize = 8;
-            series10.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series10.Name = "Series1";
-            this.chartLvl4OnePoint.Series.Add(series10);
+            series32.BorderWidth = 2;
+            series32.ChartArea = "ChartArea1";
+            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series32.Label = "#INDEX";
+            series32.Legend = "Legend1";
+            series32.MarkerSize = 8;
+            series32.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series32.Name = "Series1";
+            this.chartLvl4OnePoint.Series.Add(series32);
             this.chartLvl4OnePoint.Size = new System.Drawing.Size(649, 414);
             this.chartLvl4OnePoint.TabIndex = 15;
             this.chartLvl4OnePoint.Text = "4 уровень - график точки";
@@ -1667,39 +1718,39 @@ namespace Coursework
             // 
             // chartLvl4AllPoints
             // 
-            chartArea11.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea11.AxisX.IsStartedFromZero = false;
-            chartArea11.AxisX.LabelStyle.Enabled = false;
-            chartArea11.AxisX.MajorGrid.Enabled = false;
-            chartArea11.AxisX.MajorTickMark.Enabled = false;
-            chartArea11.AxisX.Title = "t";
-            chartArea11.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea11.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-            chartArea11.AxisY.IsStartedFromZero = false;
-            chartArea11.AxisY.LabelStyle.Enabled = false;
-            chartArea11.AxisY.MajorGrid.Enabled = false;
-            chartArea11.AxisY.MajorTickMark.Enabled = false;
-            chartArea11.AxisY.Title = "M";
-            chartArea11.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea11.Name = "ChartArea1";
-            this.chartLvl4AllPoints.ChartAreas.Add(chartArea11);
+            chartArea33.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea33.AxisX.IsStartedFromZero = false;
+            chartArea33.AxisX.LabelStyle.Enabled = false;
+            chartArea33.AxisX.MajorGrid.Enabled = false;
+            chartArea33.AxisX.MajorTickMark.Enabled = false;
+            chartArea33.AxisX.Title = "t";
+            chartArea33.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea33.AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea33.AxisY.IsStartedFromZero = false;
+            chartArea33.AxisY.LabelStyle.Enabled = false;
+            chartArea33.AxisY.MajorGrid.Enabled = false;
+            chartArea33.AxisY.MajorTickMark.Enabled = false;
+            chartArea33.AxisY.Title = "M";
+            chartArea33.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea33.Name = "ChartArea1";
+            this.chartLvl4AllPoints.ChartAreas.Add(chartArea33);
             this.chartLvl4AllPoints.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartLvl4AllPoints.Dock = System.Windows.Forms.DockStyle.Top;
             this.chartLvl4AllPoints.Enabled = false;
-            legend11.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend11.Name = "Legend1";
-            this.chartLvl4AllPoints.Legends.Add(legend11);
+            legend33.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend33.Name = "Legend1";
+            this.chartLvl4AllPoints.Legends.Add(legend33);
             this.chartLvl4AllPoints.Location = new System.Drawing.Point(0, 60);
             this.chartLvl4AllPoints.Name = "chartLvl4AllPoints";
-            series11.BorderWidth = 2;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Label = "#INDEX";
-            series11.Legend = "Legend1";
-            series11.MarkerSize = 8;
-            series11.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series11.Name = "Series1";
-            this.chartLvl4AllPoints.Series.Add(series11);
+            series33.BorderWidth = 2;
+            series33.ChartArea = "ChartArea1";
+            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series33.Label = "#INDEX";
+            series33.Legend = "Legend1";
+            series33.MarkerSize = 8;
+            series33.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series33.Name = "Series1";
+            this.chartLvl4AllPoints.Series.Add(series33);
             this.chartLvl4AllPoints.Size = new System.Drawing.Size(327, 149);
             this.chartLvl4AllPoints.TabIndex = 16;
             this.chartLvl4AllPoints.Text = "4 уровень - график всех точек";
@@ -1720,6 +1771,7 @@ namespace Coursework
             // 
             // buttonLvl4Calculate
             // 
+            this.buttonLvl4Calculate.Enabled = false;
             this.buttonLvl4Calculate.Location = new System.Drawing.Point(8, 6);
             this.buttonLvl4Calculate.Name = "buttonLvl4Calculate";
             this.buttonLvl4Calculate.Size = new System.Drawing.Size(104, 45);
@@ -1731,6 +1783,7 @@ namespace Coursework
             // comboBoxLvl4SelectedPoint
             // 
             this.comboBoxLvl4SelectedPoint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLvl4SelectedPoint.Enabled = false;
             this.comboBoxLvl4SelectedPoint.FormattingEnabled = true;
             this.comboBoxLvl4SelectedPoint.Location = new System.Drawing.Point(173, 30);
             this.comboBoxLvl4SelectedPoint.Name = "comboBoxLvl4SelectedPoint";
@@ -1759,58 +1812,13 @@ namespace Coursework
             // comboBoxLvl4SelectedBlock
             // 
             this.comboBoxLvl4SelectedBlock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLvl4SelectedBlock.Enabled = false;
             this.comboBoxLvl4SelectedBlock.FormattingEnabled = true;
             this.comboBoxLvl4SelectedBlock.Location = new System.Drawing.Point(173, 6);
             this.comboBoxLvl4SelectedBlock.Name = "comboBoxLvl4SelectedBlock";
             this.comboBoxLvl4SelectedBlock.Size = new System.Drawing.Size(148, 21);
             this.comboBoxLvl4SelectedBlock.TabIndex = 2;
             this.comboBoxLvl4SelectedBlock.SelectedIndexChanged += new System.EventHandler(this.comboBoxLvl4SelectedBlock_SelectedIndexChanged);
-            // 
-            // buttonLvl2FromAllToBlock
-            // 
-            this.buttonLvl2FromAllToBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLvl2FromAllToBlock.Location = new System.Drawing.Point(105, 121);
-            this.buttonLvl2FromAllToBlock.Name = "buttonLvl2FromAllToBlock";
-            this.buttonLvl2FromAllToBlock.Size = new System.Drawing.Size(23, 23);
-            this.buttonLvl2FromAllToBlock.TabIndex = 8;
-            this.buttonLvl2FromAllToBlock.Text = ">";
-            this.buttonLvl2FromAllToBlock.UseVisualStyleBackColor = true;
-            this.buttonLvl2FromAllToBlock.Click += new System.EventHandler(this.buttonLvl2Lb1ToLb2_Click);
-            // 
-            // buttonLvl2FromBlockToAll
-            // 
-            this.buttonLvl2FromBlockToAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLvl2FromBlockToAll.Location = new System.Drawing.Point(105, 155);
-            this.buttonLvl2FromBlockToAll.Name = "buttonLvl2FromBlockToAll";
-            this.buttonLvl2FromBlockToAll.Size = new System.Drawing.Size(23, 23);
-            this.buttonLvl2FromBlockToAll.TabIndex = 9;
-            this.buttonLvl2FromBlockToAll.Text = "<";
-            this.buttonLvl2FromBlockToAll.UseVisualStyleBackColor = true;
-            this.buttonLvl2FromBlockToAll.Click += new System.EventHandler(this.buttonLvl2Lb2ToLb1_Click);
-            // 
-            // buttonLvl3FromBlockToAll
-            // 
-            this.buttonLvl3FromBlockToAll.Enabled = false;
-            this.buttonLvl3FromBlockToAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLvl3FromBlockToAll.Location = new System.Drawing.Point(76, 137);
-            this.buttonLvl3FromBlockToAll.Name = "buttonLvl3FromBlockToAll";
-            this.buttonLvl3FromBlockToAll.Size = new System.Drawing.Size(23, 23);
-            this.buttonLvl3FromBlockToAll.TabIndex = 11;
-            this.buttonLvl3FromBlockToAll.Text = "<";
-            this.buttonLvl3FromBlockToAll.UseVisualStyleBackColor = true;
-            this.buttonLvl3FromBlockToAll.Click += new System.EventHandler(this.buttonLvl3FromBlockToAll_Click);
-            // 
-            // buttonLvl3FromAllToBlock
-            // 
-            this.buttonLvl3FromAllToBlock.Enabled = false;
-            this.buttonLvl3FromAllToBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLvl3FromAllToBlock.Location = new System.Drawing.Point(76, 103);
-            this.buttonLvl3FromAllToBlock.Name = "buttonLvl3FromAllToBlock";
-            this.buttonLvl3FromAllToBlock.Size = new System.Drawing.Size(23, 23);
-            this.buttonLvl3FromAllToBlock.TabIndex = 10;
-            this.buttonLvl3FromAllToBlock.Text = ">";
-            this.buttonLvl3FromAllToBlock.UseVisualStyleBackColor = true;
-            this.buttonLvl3FromAllToBlock.Click += new System.EventHandler(this.buttonLvl3FromAllToBlock_Click);
             // 
             // pictureBoxInData
             // 
@@ -1848,6 +1856,18 @@ namespace Coursework
             this.pictureBoxLvl2.TabIndex = 0;
             this.pictureBoxLvl2.TabStop = false;
             this.pictureBoxLvl2.Click += new System.EventHandler(this.pictureBox_Click);
+            // 
+            // buttonFormHelp
+            // 
+            this.buttonFormHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonFormHelp.BackgroundImage = global::Coursework.Properties.Resources.help_butt;
+            this.buttonFormHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonFormHelp.Location = new System.Drawing.Point(949, 3);
+            this.buttonFormHelp.Name = "buttonFormHelp";
+            this.buttonFormHelp.Size = new System.Drawing.Size(31, 31);
+            this.buttonFormHelp.TabIndex = 8;
+            this.buttonFormHelp.UseVisualStyleBackColor = true;
+            this.buttonFormHelp.Click += new System.EventHandler(this.buttonFormHelp_Click);
             // 
             // toolStripDropDownFile
             // 
@@ -1920,6 +1940,16 @@ namespace Coursework
             this.ToolStripAddRow.Name = "ToolStripAddRow";
             this.ToolStripAddRow.Size = new System.Drawing.Size(205, 22);
             this.ToolStripAddRow.Text = "Добавить строку";
+            // 
+            // toolStripButtonFormHelp
+            // 
+            this.toolStripButtonFormHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonFormHelp.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonFormHelp.Image")));
+            this.toolStripButtonFormHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonFormHelp.Name = "toolStripButtonFormHelp";
+            this.toolStripButtonFormHelp.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonFormHelp.Text = "Справка";
+            this.toolStripButtonFormHelp.Click += new System.EventHandler(this.buttonFormHelp_Click);
             // 
             // MainForm
             // 
@@ -2141,6 +2171,8 @@ namespace Coursework
         private System.Windows.Forms.Button buttonLvl2FromAllToBlock;
         private System.Windows.Forms.Button buttonLvl3FromBlockToAll;
         private System.Windows.Forms.Button buttonLvl3FromAllToBlock;
+        private System.Windows.Forms.Button buttonFormHelp;
+        private System.Windows.Forms.ToolStripButton toolStripButtonFormHelp;
     }
 }
 

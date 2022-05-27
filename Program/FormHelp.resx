@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Во владке "Данные" представлен выбор таблицы для исходных данных, ее отображение, отображение схемы объекта и добавление/удаление строк в открытой табилце.
+
+1) В верхней строке на выпадающее меню "Файл" выберите пункт "Открыть БД";
+
+2) В открывшемся диалоговом окне выберите нужный файл на вашем устройстве;
+
+3) После открытия базы данных выберите нужную вам таблицу в выпадающем меню "Таблица";
+
+4) Для добавления строки нажмите кнопку "Добавить строку";
+
+5) Чтобы удалить строке в открытой таблице выделите нужные вам строки и нажмите кнопку "Удалить строки";
+
+6) Чтобы открыть картинку в новом окне нажмите на нее;
+
+7) Для настройки количества отображаемых знаков в просчетах установите соответствующее число в счетчике;
+
+8) Чтобы сохранить изменения в базе данных, выберите на верхней панели "Файл" и нажмите кнопку "Сохранить БД";
+
+9) Кнопка "Закрыть БД" в списке "Файл" закрывает открытую БД;
+
+10) Изменение значений для T и A автоматически заносятся в БД.
+</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Во владке 1 уровень представлены расчеты по 1 уровню декомпозиции.
+
+1) Для выполнения расчетом нажмите кнопку "Вычислить 1 уровень";
+
+2) По вкладкам таблиц расписаны результаты просчетов 1 уровня, соответственно Аварийность, Значения вектора и его грнаиц, Результаты прогноза;
+
+2) Для открытия графика в новом окне достаточно нажать на него.</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>Во владке 2 уровень выполняются расчеты по 2 уровню декомпозиции соответственно.
+
+1) В счетчике выберите нужное число блоков у объекта и нажмите кнопку "Применить";
+
+2) Рассортируйте точки по нужным вам блокам и нажмите кнопку "Посчитать";
+
+3) Чтобы посмотреть вычисления по выбранному блоку выберите нужный блок в списке "Выбранный блок";
+
+4) Подсчеты представлены аналогичным образом как в 1 уровне, а также представлен график движения всех блоков относительно друг друга.
+
+По второму уровню выполяются расчеты в 3 и 4 уровнях.</value>
+  </data>
+  <data name="richTextBox4.Text" xml:space="preserve">
+    <value>Во владке 3 уровень выполняются расчеты по каждому подблоку в блоке.
+Для просчета 3 уровня необходимо выполнить 2 уровень декомпозиции.
+
+1) Во вкладке "Распределение точек" выберите нужный вам блок. Выполнятся расчеты по сцепкам между каждой из точек и отобразятся в соответствующих таблицах. Также построится граф связей между точками.
+Зеленая линия - связь присутствует.
+Красная линия - связь отсутствует;
+
+2) Выберите количество подблоков и нажмите кнопку "Применить";
+
+3) Распределите точки по нужным вам подблокам и нажмите кнопку "Вычислить";
+
+4) Выполнятся расчеты по подблокам в блоке, построится график движения кадого из подблоков относительно друг друга. Для просмотра расчетов каждого из подблоков перейдите на вкладку "Просмотр". Расчеты представлены схожим образом с 1 уровнем</value>
+  </data>
+  <data name="richTextBox5.Text" xml:space="preserve">
+    <value>Во владке 4 уровень выполняются расчеты по каждой из точек.
+4 уровень не посчитается без 2 уровня.
+
+1) Выберите необходимый вам блок (либо нераспределенные точки) в списке "Блок" и нажмите кнопку "Посчитать";
+
+2) Выполнится просчет движения каждой из точек, составится график движения каждой точки, относительно друг друга;
+
+3) Для выбора необходимой вам точки выберите ее в списке "Точка". Выведутся расчеты по выбранной вам точке, а также отобразится график ее движения.</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>В окне отображения графика предоставляется возможность настройки вида отображаемых графико и области их построения.
+
+1) В группе "Вид осей" можно включить/выключить отображение сетки и подписей к осям;
+
+2) В группе "Вид графиков" можно выбирать вид отображаемых графиков, включить/отключить мекти, настроить толщину метки и подписи к меткам;
+
+3) В списке с графиками можно включить/выключать их отображение.</value>
+  </data>
+</root>

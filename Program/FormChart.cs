@@ -16,8 +16,6 @@ namespace Coursework
     /// </summary>
     public partial class FormChart : Form
     {
-        private CheckBox[] seriesCheckBox;
-
         /// <summary>
         /// Конструктор конструкторный
         /// </summary>
@@ -32,7 +30,6 @@ namespace Coursework
             chartVis.Series.Clear();
             chartVis.ChartAreas[0].AxisX.Title = xName;
             chartVis.ChartAreas[0].AxisY.Title = yName;
-            seriesCheckBox = new CheckBox[seriesCollection.Count];
             foreach (Series s in seriesCollection)
             {
                 chartVis.Series.Add(s.Name);
@@ -45,8 +42,17 @@ namespace Coursework
                 }
                 checkedListBoxSeries.Items.Add(s.Name, true);
             }
+            comboBoxLinesType.SelectedIndex = 0;
         }
-        
+
+        // Метод загрузки формы
+        private void FormChart_Load(object sender, EventArgs e)
+        {
+            numericUpDownLineWidth.Value = 2;
+            checkBoxTags.Checked = true;
+            radioButtonTagCaptionNumber.Checked = true;
+        }
+
         // Изменение флага у отображения сетки
         private void checkBoxGridVisible_CheckedChanged(object sender, EventArgs e)
         {
@@ -156,9 +162,13 @@ namespace Coursework
             {
                 newType = SeriesChartType.Spline;
             }
-            else
+            else if (comboBoxLinesType.SelectedIndex == 1)
             {
                 newType = SeriesChartType.Line;
+            }
+            else
+            {
+                newType = SeriesChartType.Point;
             }
             ChangeAllSeries((i, j) =>
             {
@@ -176,11 +186,11 @@ namespace Coursework
             chartVis.ChartAreas[0].RecalculateAxesScale();
         }
 
-        private void FormChart_Load(object sender, EventArgs e)
+        // Кнопка открытия окна справки
+        private void buttonFormHelp_Click(object sender, EventArgs e)
         {
-            numericUpDownLineWidth.Value = 2;
-            checkBoxTags.Checked = true;
-            radioButtonTagCaptionNumber.Checked = true;
+            FormHelp form = new FormHelp(5);
+            form.Show();
         }
     }
 }

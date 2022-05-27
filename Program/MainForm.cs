@@ -93,6 +93,8 @@ namespace Coursework
             buttonDeleteRows.Enabled = false;
             buttonLvl1Calculate.Enabled = false;
             buttonLvl2ApplyAllocation.Enabled = false;
+            buttonLvl3Calculate.Enabled = false;
+            buttonLvl4Calculate.Enabled = false;
             ToolStripSaveDB.Enabled = false;
             ToolStripCloseDB.Enabled = false;
             ToolStripUpdateImage.Enabled = false;
@@ -156,6 +158,8 @@ namespace Coursework
             {
                 Image image = Image.FromFile(fileDialog.FileName);
                 pictureBoxInData.Image = image;
+                pictureBoxLvl1.Image = image;
+                pictureBoxLvl2.Image = image;
                 CRequest.IMG = image;
             }
         }
@@ -184,10 +188,13 @@ namespace Coursework
         // Изменение значения в TextBox для T
         private void textBoxT_TextChanged(object sender, EventArgs e)
         {
-            TextBox tb = (sender as TextBox);
             try
             {
-                CRequest.WriteT(Convert.ToDecimal(tb.Text));
+                decimal val = Convert.ToDecimal(textBoxT.Text);
+                if (val > 0)
+                {
+                    CRequest.WriteT(Convert.ToDecimal(textBoxT.Text));
+                }
             }
             catch { }
         }
@@ -195,10 +202,13 @@ namespace Coursework
         // Изменение значения в TextBox для A
         private void textBoxA_TextChanged(object sender, EventArgs e)
         {
-            TextBox tb = (sender as TextBox);
             try
             {
-                CRequest.WriteA(Convert.ToDecimal(tb.Text));
+                decimal val = Convert.ToDecimal(textBoxA.Text);
+                if (val >= 0 && val <= 1)
+                {
+                    CRequest.WriteA(Convert.ToDecimal(textBoxA.Text));
+                }
             }
             catch { }
         }
@@ -218,6 +228,12 @@ namespace Coursework
             frm.Show();
         }
 
+        // Кнопка открытия справки
+        private void buttonFormHelp_Click(object sender, EventArgs e)
+        {
+            FormHelp form = new FormHelp(tabControlNavigation.SelectedIndex);
+            form.Show();
+        }
 
         /*                       Функционал для вкладки с данными                       */
 
@@ -403,6 +419,8 @@ namespace Coursework
             {
                 comboBoxLvl3SelectBlock.Items.Add($"Блок {Convert.ToChar('А' + i)}");
             }
+
+            buttonLvl4Calculate.Enabled = true;
         }
         
         // Изменение выбранного блока для отображения
@@ -491,7 +509,7 @@ namespace Coursework
                     for (int row = 0; row < CData.RowCount; row++)
                     {
                         decimal qua = Math.Abs(Lvl3SubBlockTable[row][i] - Lvl3SubBlockTable[row][j]);
-                        max = Math.Max(max, qua - firstQua);
+                        max = Math.Max(max, Math.Abs(qua - firstQua));
                         dataGridViewLvl3LinksL.Rows[row].Cells[dataCol].Value = qua;
                         dataGridViewlvl3LinksTF.Rows[row].Cells[dataCol].Value = Math.Abs(qua - firstQua);
                     }
@@ -612,7 +630,7 @@ namespace Coursework
             }
 
             Lvl3Data = new CDecompLvl2(Lvl3PointsStorage);
-            Lvl3Data.FillChart(chartLvl3AllSubBlocks);
+            Lvl3Data.FillChart(chartLvl3AllSubBlocks, "Подблок");
 
             comboBoxLvl3SelectSubBlockOutput.Enabled = true;
             comboBoxLvl3SelectSubBlockOutput.SelectedIndex = 0;
@@ -688,7 +706,7 @@ namespace Coursework
             comboBoxLvl4SelectedPoint.SelectedIndex = -1;
             comboBoxLvl4SelectedPoint.SelectedIndex = 0;
 
-            Lvl4Data[index].FillChart(chartLvl4AllPoints, "Точка");
+            Lvl4Data[index].FillChart(chartLvl4AllPoints, "Точка", Lvl4PointsStorage[index]);
         }
 
         // Изменение выбранной точки

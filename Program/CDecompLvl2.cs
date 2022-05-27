@@ -47,13 +47,30 @@ namespace Coursework
         /// Заполнить общий график всех блоков
         /// </summary>
         /// <param name="chart">График для заполнения</param>
-        public void FillChart(Chart chart, string caption = "Блок")
+        public void FillChart(Chart chart, string caption = "Блок", List<int> listMark = null)
         {
             chart.Series.Clear();
             chart.ChartAreas[0].RecalculateAxesScale();
             for (int i = 0; i < PointsStorage.Length; i++)
             {
-                chart.Series.Add(CData.GetSeries($"{caption} {i + 1}", Data[i].M.M));
+                string serName;
+
+                if (listMark is null)
+                {
+                    if (caption == "Блок")
+                    {
+                        serName = $"{caption} {Convert.ToChar('А' + i)}";
+                    }
+                    else
+                    {
+                        serName = $"{caption} {i + 1}";
+                    }
+                }
+                else
+                {
+                    serName = $"{caption} {listMark[i]}";
+                }
+                chart.Series.Add(CData.GetSeries(serName, Data[i].M.M));
             }
         }
 

@@ -111,7 +111,7 @@ namespace Coursework
                 }
                 decimal acosVal = summProd / (M[0] * M[row]);
                 decimal alphaVal = acosVal < 1 && acosVal > -1 ? DecimalMath.Acos(acosVal) : 0;
-                result.Add(Math.Round(alphaVal, 8) == 0 ? 0 : alphaVal);
+                result.Add(Math.Round(alphaVal, 6));
             }
             return result;
         }

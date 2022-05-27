@@ -60,3 +60,4 @@ C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormImage.resources
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormOpenDB.resources
 C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormChartLinks.resources
+C:\Users\Некит программис\source\repos\Lisovsky-UwU\My-coursework\Program\obj\Debug\Coursework.FormHelp.resources
