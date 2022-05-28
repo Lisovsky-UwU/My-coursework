@@ -191,7 +191,7 @@ namespace Coursework
             try
             {
                 decimal val = Convert.ToDecimal(textBoxT.Text);
-                if (val > 0)
+                if (val >= 0 && val <= 1)
                 {
                     CRequest.WriteT(Convert.ToDecimal(textBoxT.Text));
                 }
@@ -211,6 +211,18 @@ namespace Coursework
                 }
             }
             catch { }
+        }
+
+        // Когда поле ввода для T перестает быть активным
+        private void textBoxT_Leave(object sender, EventArgs e)
+        {
+            textBoxT.Text = CData.T.ToString();
+        }
+
+        // Когда поле ввода для A перестает быть активным
+        private void textBoxA_Leave(object sender, EventArgs e)
+        {
+            textBoxA.Text = CData.A.ToString();
         }
 
         // Нажание на Chart
@@ -692,6 +704,8 @@ namespace Coursework
 
             chartLvl4AllPoints.Enabled = true;
             chartLvl4OnePoint.Enabled = true;
+            comboBoxLvl4SelectedBlock.Enabled = true;
+            comboBoxLvl4SelectedPoint.Enabled = true;
         }
 
         // Изменение выбранного блока точек

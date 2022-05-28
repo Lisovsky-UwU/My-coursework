@@ -115,6 +115,13 @@ namespace Coursework
             return newTable;
         }
 
+        /// <summary>
+        /// Заполнение графа связий для 3 уровня
+        /// </summary>
+        /// <param name="chart">График для заполнения</param>
+        /// <param name="matrix">Булевая матрица инцидентности для графа</param>
+        /// <param name="pointList">Номера точек для графа</param>
+        /// <param name="borderWidth">Толщина линий у графа</param>
         public static void FillChartLinks(Chart chart, bool[,] matrix, List<int> pointList, int borderWidth = 1)
         {
             chart.Series.Clear();
