@@ -611,7 +611,7 @@ namespace Coursework
             this.chartLvl1AllM.Series.Add(series1);
             this.chartLvl1AllM.Size = new System.Drawing.Size(281, 204);
             this.chartLvl1AllM.TabIndex = 6;
-            this.chartLvl1AllM.Text = "2 уровень - фазовый график";
+            this.chartLvl1AllM.Text = "2 уровень - график отклика";
             this.chartLvl1AllM.Click += new System.EventHandler(this.chart_Click);
             // 
             // chartLvl1Phase
@@ -647,7 +647,7 @@ namespace Coursework
             this.chartLvl1Phase.Series.Add(series2);
             this.chartLvl1Phase.Size = new System.Drawing.Size(281, 204);
             this.chartLvl1Phase.TabIndex = 3;
-            this.chartLvl1Phase.Text = "1 уровень - график отклика";
+            this.chartLvl1Phase.Text = "1 уровень - фазовый график";
             this.chartLvl1Phase.Click += new System.EventHandler(this.chart_Click);
             // 
             // panelLvl1Main
@@ -839,7 +839,7 @@ namespace Coursework
             this.chartLvl2AllM.Series.Add(series3);
             this.chartLvl2AllM.Size = new System.Drawing.Size(234, 210);
             this.chartLvl2AllM.TabIndex = 6;
-            this.chartLvl2AllM.Text = "2 уровень - фазовый график";
+            this.chartLvl2AllM.Text = "2 уровень - график отклика";
             this.chartLvl2AllM.Click += new System.EventHandler(this.chart_Click);
             // 
             // chartLvl2Phase
@@ -875,7 +875,7 @@ namespace Coursework
             this.chartLvl2Phase.Series.Add(series4);
             this.chartLvl2Phase.Size = new System.Drawing.Size(234, 204);
             this.chartLvl2Phase.TabIndex = 3;
-            this.chartLvl2Phase.Text = "2 уровень - график отклика";
+            this.chartLvl2Phase.Text = "2 уровень - фазовый график";
             this.chartLvl2Phase.Click += new System.EventHandler(this.chart_Click);
             // 
             // tabControlLvl2Tables
@@ -1608,7 +1608,7 @@ namespace Coursework
             this.chartLvl3AllM.Series.Add(series8);
             this.chartLvl3AllM.Size = new System.Drawing.Size(491, 201);
             this.chartLvl3AllM.TabIndex = 19;
-            this.chartLvl3AllM.Text = "3 уровень - фазовый график";
+            this.chartLvl3AllM.Text = "3 уровень - график отклика";
             // 
             // chartLvl3Phase
             // 
@@ -1643,7 +1643,7 @@ namespace Coursework
             this.chartLvl3Phase.Series.Add(series9);
             this.chartLvl3Phase.Size = new System.Drawing.Size(491, 181);
             this.chartLvl3Phase.TabIndex = 17;
-            this.chartLvl3Phase.Text = "3 уровень - график отклика";
+            this.chartLvl3Phase.Text = "3 уровень - фазовый график";
             // 
             // panel2
             // 
@@ -1820,7 +1820,7 @@ namespace Coursework
             this.chartLvl4OnePoint.Series.Add(series10);
             this.chartLvl4OnePoint.Size = new System.Drawing.Size(649, 414);
             this.chartLvl4OnePoint.TabIndex = 15;
-            this.chartLvl4OnePoint.Text = "4 уровень - график точки";
+            this.chartLvl4OnePoint.Text = "4 уровень - график траектории точки";
             this.chartLvl4OnePoint.Click += new System.EventHandler(this.chart_Click);
             // 
             // panelLvl4Data
@@ -1886,7 +1886,7 @@ namespace Coursework
             this.chartLvl4AllPoints.Series.Add(series11);
             this.chartLvl4AllPoints.Size = new System.Drawing.Size(327, 149);
             this.chartLvl4AllPoints.TabIndex = 16;
-            this.chartLvl4AllPoints.Text = "4 уровень - график всех точек";
+            this.chartLvl4AllPoints.Text = "4 уровень - график траекторий всех точек";
             this.chartLvl4AllPoints.Click += new System.EventHandler(this.chart_Click);
             // 
             // panelLvl4DataTop
