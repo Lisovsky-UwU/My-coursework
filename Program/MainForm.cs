@@ -570,6 +570,8 @@ namespace Coursework
             }
 
             Lvl3PointsStorage = new List<int>[Lvl3CountSubblocks];
+            comboBoxLvl3SelectSubBlock.Items.Clear();
+            comboBoxLvl3SelectSubBlockOutput.Items.Clear();
             for (int i = 0; i < Lvl3CountSubblocks; i++)
             {
                 comboBoxLvl3SelectSubBlock.Items.Add($"Подблок {i + 1}");
@@ -577,12 +579,13 @@ namespace Coursework
                 Lvl3PointsStorage[i] = new List<int>();
             }
 
+            listBoxLvl3AllSubBlocksPoints.Items.Clear();
+            listBoxLvl3SubBlockPoints.Items.Clear();
             for (int i = 0; i < Lvl3PointsList.Count; i++)
             {
                 listBoxLvl3AllSubBlocksPoints.Items.Add(Lvl3PointsList[i]);
             }
 
-            listBoxLvl3AllSubBlocksPoints.Items.Clear();
             listBoxLvl3AllSubBlocksPoints.Enabled = true;
             listBoxLvl3SubBlockPoints.Enabled = true;
             buttonLvl3FromAllToBlock.Enabled = true;
