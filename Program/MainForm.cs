@@ -582,6 +582,7 @@ namespace Coursework
                 listBoxLvl3AllSubBlocksPoints.Items.Add(Lvl3PointsList[i]);
             }
 
+            listBoxLvl3AllSubBlocksPoints.Items.Clear();
             listBoxLvl3AllSubBlocksPoints.Enabled = true;
             listBoxLvl3SubBlockPoints.Enabled = true;
             buttonLvl3FromAllToBlock.Enabled = true;
