@@ -611,7 +611,7 @@ namespace Coursework
             this.chartLvl1AllM.Series.Add(series1);
             this.chartLvl1AllM.Size = new System.Drawing.Size(281, 204);
             this.chartLvl1AllM.TabIndex = 6;
-            this.chartLvl1AllM.Text = "2 уровень - график отклика";
+            this.chartLvl1AllM.Text = "1 уровень - график отклика";
             this.chartLvl1AllM.Click += new System.EventHandler(this.chart_Click);
             // 
             // chartLvl1Phase
